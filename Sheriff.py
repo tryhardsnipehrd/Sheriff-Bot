@@ -1,6 +1,7 @@
 import discord
 import typing
 import random
+import os
 thing = 12
 
 
@@ -68,5 +69,5 @@ async def on_message(message):
         await message.channel.send(thing)
         thing = random.randint(1, 255)
         await message.channel.send(thing)
-client.run('')
+client.run(os.environ["DISCORD_TOKEN"])
 
