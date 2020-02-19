@@ -26,7 +26,7 @@ async def on_message(message):
         await message.channel.send('https://discordapp.com/oauth2/authorize?client_id=668932488068071427&scope=bot&permissions=8')
 
     if message.content.startswith('$help'):
-        await message.channel.send('$hello for me to say hello back! Use $optimist to get a DM with some optimism! and use $invite to invite me to server! Also, There are multiple keywords that I respond to... Try to find them all!')
+        await message.channel.send('$hello for me to say hello back! Use $optimist to get a DM with some optimism! and use $invite to invite me to server! $rps [Rock, Paper, Scissors] will play with you! Also, There are multiple keywords that I respond to... Try to find them all!')
    
     if message.content.startswith('$oops'):
         await message.channel.send('What did you do this time...')
