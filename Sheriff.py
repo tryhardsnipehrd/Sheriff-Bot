@@ -70,5 +70,38 @@ async def on_message(message):
         await message.channel.send(thing)
         thing = random.randint(1, 255)
         await message.channel.send(thing)
+#Rock Paper Scissors of HELL
+    if message.content.startswith("$rps"):
+        if "Scissors" in message.content:
+            rps2 = random.choice(rps)
+            await message.channel.send(f"I chose {rps2} and you chose scissors!")
+            if rps2 == "Scissors":
+                await message.channel.send("DRAW")
+            elif rps2 == "Paper":
+                await message.channel.send("I can't believe you beat me...")
+            elif rps2 == "Rock":
+                await message.channel.send("I WIN!!!")
+            else:
+                await message.channel.send("How did you get this?")
+        elif "Paper" in message.content:
+            rps2 = random.choice(rps)
+            await message.channel.send(f"I chose {rps2} and you chose Paper!")
+            if rps2 == "Paper":
+                await message.channel.send("DRAW")
+            elif rps2 == "Rock":
+                await message.channel.send("I can't believe you beat me...")
+            elif rps2 == "Scissors":
+                await message.channel.send("I WIN!!!")
+        elif "Rock" in message.content:
+            rps2 = random.choice(rps)
+            await message.channel.send(f"I chose {rps2} and you chose Rock!")
+            if rps2 == "Rock":
+                await message.channel.send("DRAW")
+            elif rps2 == "Scissors":
+                await message.channel.send("I can't believe you beat me...")
+            elif rps2 == "Paper":
+                await message.channel.send("I WIN!!!")
+        else:
+            await message.channel.send("Please use a valid Rock Paper or Scissor...")
 client.run(os.environ["DISCORD_TOKEN"])
 
