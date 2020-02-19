@@ -5,7 +5,7 @@ import os
 thing = 12
 happy = ["Be you... If someone doesn't like it, tell them to Fuck off...","I believe in you!"]
 
-
+rps = ["Rock", "Paper", "Scissors"]
 
 client = discord.Client()
 
