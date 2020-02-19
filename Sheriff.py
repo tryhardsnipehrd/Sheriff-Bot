@@ -3,7 +3,7 @@ import typing
 import random
 import os
 thing = 12
-happy = ["Be you... If someone doesn't like it, tell them to Fuck off...","I believe in you!"]
+happy = ["Be you... If someone doesn't like it, tell them to Fuck off...","I believe in you!", "Does anyone even use this?"]
 
 rps = ["Rock", "Paper", "Scissors"]
 
