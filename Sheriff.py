@@ -3,6 +3,7 @@ import typing
 import random
 import os
 thing = 12
+happy = ["Be you... If someone doesn't like it, tell them to Fuck off...","I believe in you!"]
 
 
 
@@ -40,7 +41,7 @@ async def on_message(message):
         await message.channel.send("YOU NEED TO STOP IF THEY SAY TO!!!!")
 
     if message.content.startswith('$optimist'):
-        await message.author.send('STAY POSITIVE')
+        await message.author.send(random.choice(happy))
     
     async def joined(ctx, member: discord.Member):
         await ctx.send('{0.name} joined in {0.joined_at}'.format(member))
