@@ -2,33 +2,32 @@ import discord
 import typing
 import random
 import os
+from discord.ext import commands
 thing = 12
 happy = ["Be you... If someone doesn't like it, tell them to Fuck off...","I believe in you!", "Does anyone even use this?"]
 
 rps = ["Rock", "Paper", "Scissors"]
 
-client = discord.Client()
+bot = commands.Bot(command_prefix='$')
 
-@client.event
+@bot.event
 async def on_ready():
-    print('We have logged in as {0.user}'.format(client))
+    print('We have logged in as {0.user}'.format(bot))
     
-@client.event
+@bot.event
 async def on_message(message):
     
-    if message.author == client.user:
+    if message.author == bot.user:
         return
 
-    if message.content.startswith('$hello'):
-        await message.channel.send(f'Hello {message.author.mention}!')
     
-    if message.content.startswith('$invite'):
+    if message.content.startswith('s.invite'):
         await message.channel.send('https://discordapp.com/oauth2/authorize?client_id=668932488068071427&scope=bot&permissions=8')
 
-    if message.content.startswith('$help'):
+    if message.content.startswith('s.help'):
         await message.channel.send('$hello for me to say hello back! Use $optimist to get a DM with some optimism! and use $invite to invite me to server! $rps [Rock, Paper, Scissors] will play with you! Also, There are multiple keywords that I respond to... Try to find them all!')
    
-    if message.content.startswith('$oops'):
+    if message.content.startswith('s.oops'):
         await message.channel.send('What did you do this time...')
 
     if 'oops' in message.content:
@@ -40,7 +39,7 @@ async def on_message(message):
     if 'stop' in message.content:
         await message.channel.send("YOU NEED TO STOP IF THEY SAY TO!!!!")
 
-    if message.content.startswith('$optimist'):
+    if message.content.startswith('s.optimist'):
         await message.author.send(random.choice(happy))
     
     async def joined(ctx, member: discord.Member):
@@ -55,10 +54,10 @@ async def on_message(message):
     if 'yuri' in message.content:
         await message.channel.send("DON'T MESS WITH THE SHERIFF'S WAI- I MEAN FRIEND...")
 
-    if message.content.startswith('$doki'):
+    if message.content.startswith('s.doki'):
         await message.channel.send("use Y_invite, N_invite, S_invite, M_invite, and MC_invite to add all of the bots to your server!!! (PS... I would not recommend Monika... She is a bitch)")
 
-    if message.content.startswith('$color'):
+    if message.content.startswith('s.color'):
         await message.channel.send('Here are three numbers for RGB colors...')
         await message.channel.send('3')
         await message.channel.send('2')
@@ -71,7 +70,7 @@ async def on_message(message):
         thing = random.randint(1, 255)
         await message.channel.send(thing)
 #Rock Paper Scissors of HELL
-    if message.content.startswith("$rps"):
+    if message.content.startswith("s.rps"):
         if "Scissors" in message.content:
             rps2 = random.choice(rps)
             await message.channel.send(f"I chose {rps2} and you chose scissors!")
@@ -103,5 +102,31 @@ async def on_message(message):
                 await message.channel.send("I WIN!!!")
         else:
             await message.channel.send("Please use a valid Rock Paper or Scissor...")
-client.run(os.environ["DISCORD_TOKEN"])
+    
+    await bot.process_commands(message)
+
+
+
+@bot.command()
+async def test(ctx, arg):
+    await ctx.send(arg)
+
+@bot.command()
+async def greet(ctx, arg):
+    await ctx.send(f"hello {arg}")
+
+@bot.command()
+async def hello(ctx):
+        await ctx.send(f'Hello {ctx.author.mention}!')
+
+@bot.command()
+async def color(ctx):
+        await ctx.send('Here are three numbers for RGB colors...')
+        thing = random.randint(1, 255)
+        await ctx.send(thing)
+        thing = random.randint(1, 255)
+        await ctx.send(thing)
+        thing = random.randint(1, 255)
+        await ctx.send(thing)
+bot.run(os.environ["DISCORD_TOKEN"])
 
