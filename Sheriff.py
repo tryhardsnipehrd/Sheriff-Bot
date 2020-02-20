@@ -21,10 +21,10 @@ async def on_message(message):
         return
 
     
-    if message.content.startswith('s.invite'):
+    if message.content.startswith('$invite'):
         await message.channel.send('https://discordapp.com/oauth2/authorize?client_id=668932488068071427&scope=bot&permissions=8')
    
-    if message.content.startswith('s.oops'):
+    if message.content.startswith('$oops'):
         await message.channel.send('What did you do this time...')
 
     if 'oof' in message.content:
@@ -33,7 +33,7 @@ async def on_message(message):
     if 'stop' in message.content:
         await message.channel.send("YOU NEED TO STOP IF THEY SAY TO!!!!")
 
-    if message.content.startswith('s.optimist'):
+    if message.content.startswith('$optimist'):
         await message.author.send(random.choice(happy))
     
     async def joined(ctx, member: discord.Member):
@@ -48,10 +48,10 @@ async def on_message(message):
     if 'yuri' in message.content:
         await message.channel.send("DON'T MESS WITH THE SHERIFF'S WAI- I MEAN FRIEND...")
 
-    if message.content.startswith('s.doki'):
+    if message.content.startswith('$doki'):
         await message.channel.send("use Y_invite, N_invite, S_invite, M_invite, and MC_invite to add all of the bots to your server!!! (PS... I would not recommend Monika... She is a bitch)")
 
-    if message.content.startswith('s.color'):
+    if message.content.startswith('$color'):
         await message.channel.send('Here are three numbers for RGB colors...')
         await message.channel.send('3')
         await message.channel.send('2')
@@ -64,7 +64,7 @@ async def on_message(message):
         thing = random.randint(1, 255)
         await message.channel.send(thing)
 #Rock Paper Scissors of HELL
-    if message.content.startswith("s.rps"):
+    if message.content.startswith("$rps"):
         if "Scissors" in message.content:
             rps2 = random.choice(rps)
             await message.channel.send(f"I chose {rps2} and you chose scissors!")
@@ -118,6 +118,10 @@ async def oops(ctx):
     await ctx.send("What did you do wrong this time...")
 
 @bot.command()
+async def optimist(ctx):
+    await ctx.author.send(random.choice(happy))
+
+@bot.command()
 async def color(ctx):
         await ctx.send('Here are three numbers for RGB colors...')
         thing = random.randint(1, 255)
@@ -126,5 +130,6 @@ async def color(ctx):
         await ctx.send(thing)
         thing = random.randint(1, 255)
         await ctx.send(thing)
+
 bot.run(os.environ["DISCORD_TOKEN"])
 
