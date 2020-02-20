@@ -107,29 +107,34 @@ async def test(ctx, arg):
 
 @bot.command()
 async def greet(ctx, arg):
-    await ctx.send(f"hello {arg}")
+    """Have me greet the mentioned user!"""
+    await ctx.send(f"Hello {arg}!")
 
 @bot.command()
 async def hello(ctx):
+    """Greet yourself!"""
     await ctx.send(f'Hello {ctx.author.mention}!')
 
 @bot.command()
 async def oops(ctx):
+    """When you F*uck something up..."""
     await ctx.send("What did you do wrong this time...")
 
 @bot.command()
 async def optimist(ctx):
+    """When you are having a bad day..."""
     await ctx.author.send(random.choice(happy))
 
 @bot.command()
 async def color(ctx):
-        await ctx.send('Here are three numbers for RGB colors...')
-        thing = random.randint(1, 255)
-        await ctx.send(thing)
-        thing = random.randint(1, 255)
-        await ctx.send(thing)
-        thing = random.randint(1, 255)
-        await ctx.send(thing)
+    """Get a random color in RGB values!"""
+    await ctx.send('Here are three numbers for RGB colors...')
+    thing = random.randint(1, 255)
+    await ctx.send(thing)
+    thing = random.randint(1, 255)
+    await ctx.send(thing)
+    thing = random.randint(1, 255)
+    await ctx.send(thing)
 
 bot.run(os.environ["DISCORD_TOKEN"])
 
