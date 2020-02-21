@@ -6,7 +6,7 @@ from discord.ext import commands
 thing = 12
 happy = ["Be you... If someone doesn't like it, tell them to Fuck off...","I believe in you!", "Does anyone even use this?"]
 
-rps = ["Rock", "Paper", "Scissors"]
+rps1 = ["Rock", "Paper", "Scissors"]
 
 bot = commands.Bot(command_prefix='$')
 
