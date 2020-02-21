@@ -66,39 +66,7 @@ async def on_message(message):
         
     if 'no u' in message.content:
         await message.channel.send("NO YOU!")
-#Rock Paper Scissors of HELL
-    if message.content.startswith("$rps"):
-        if "Scissors" in message.content:
-            rps2 = random.choice(rps)
-            await message.channel.send(f"I chose {rps2} and you chose scissors!")
-            if rps2 == "Scissors":
-                await message.channel.send("DRAW")
-            elif rps2 == "Paper":
-                await message.channel.send("I can't believe you beat me...")
-            elif rps2 == "Rock":
-                await message.channel.send("I WIN!!!")
-            else:
-                await message.channel.send("How did you get this?")
-        elif "Paper" in message.content:
-            rps2 = random.choice(rps)
-            await message.channel.send(f"I chose {rps2} and you chose Paper!")
-            if rps2 == "Paper":
-                await message.channel.send("DRAW")
-            elif rps2 == "Rock":
-                await message.channel.send("I can't believe you beat me...")
-            elif rps2 == "Scissors":
-                await message.channel.send("I WIN!!!")
-        elif "Rock" in message.content:
-            rps2 = random.choice(rps)
-            await message.channel.send(f"I chose {rps2} and you chose Rock!")
-            if rps2 == "Rock":
-                await message.channel.send("DRAW")
-            elif rps2 == "Scissors":
-                await message.channel.send("I can't believe you beat me...")
-            elif rps2 == "Paper":
-                await message.channel.send("I WIN!!!")
-        else:
-            await message.channel.send("Please use a valid Rock Paper or Scissor...")
+
     
     await bot.process_commands(message)
 
@@ -138,6 +106,45 @@ async def color(ctx):
     await ctx.send(thing)
     thing = random.randint(1, 255)
     await ctx.send(thing)
+    
+@bot.command()
+async def rps(ctx, arg):
+    """Rock Paper Scissors!"""
+    rps2 = random.choice(rps1)
+    await ctx.send(f"You chose {arg} and I chose {rps2}")
+    if arg == "Scissors":
+        if rps2 == "Scissors":
+            await ctx.send(f"We seem to have tied, {ctx.author.mention}")
+
+        if rps2 == "Paper":
+            await ctx.send(f"Y-You beat me... Congratulations {ctx.author.mention}...")
+            
+        if rps2 == "Rock":
+            await ctx.send(f"And yet another victory for me!/nI am now up to {wins} Wins!")
+            wins = wins + 1
+
+    if arg == "Paper":
+        if rps2 == "Paper":
+            await ctx.send(f"We seem to have tied, {ctx.author.mention}")
+
+        if rps2 == "Scissors":
+            await ctx.send(f"And yet another victory for me!/nI am now up to {wins} Wins!")
+            wins = wins + 1
+
+        if rps2 == "Rock":
+            await ctx.send(f"Y-You beat me... Congratulations {ctx.author.mention}")
+
+    if arg == "Rock":
+        if rps2 == "Rock":
+            await ctx.send(f"We seem to have tied, {ctx.author.mention}")
+        
+        if rps2 == "Paper":
+            wins = wins + 1
+            await ctx.send(f"Another win for me!/nI am now up to {wins} Wins!")
+            
+
+        if rps2 == "Scissors":
+            await ctx.send(f"Y-You beat me... Congratulations {ctx.author.mention}")
 
 bot.run(os.environ["DISCORD_TOKEN"])
 
