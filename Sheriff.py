@@ -120,16 +120,16 @@ async def rps(ctx, arg):
             await ctx.send(f"Y-You beat me... Congratulations {ctx.author.mention}...")
             
         if rps2 == "Rock":
-            await ctx.send(f"And yet another victory for me!/nI am now up to {wins} Wins!")
-            wins = wins + 1
+            await ctx.send(f"And yet another victory for me!")
+            
 
     if arg == "Paper":
         if rps2 == "Paper":
             await ctx.send(f"We seem to have tied, {ctx.author.mention}")
 
         if rps2 == "Scissors":
-            await ctx.send(f"And yet another victory for me!/nI am now up to {wins} Wins!")
-            wins = wins + 1
+            await ctx.send(f"And yet another victory for me!")
+            
 
         if rps2 == "Rock":
             await ctx.send(f"Y-You beat me... Congratulations {ctx.author.mention}")
@@ -139,8 +139,8 @@ async def rps(ctx, arg):
             await ctx.send(f"We seem to have tied, {ctx.author.mention}")
         
         if rps2 == "Paper":
-            wins = wins + 1
-            await ctx.send(f"Another win for me!/nI am now up to {wins} Wins!")
+            
+            await ctx.send(f"Another win for me!")
             
 
         if rps2 == "Scissors":
