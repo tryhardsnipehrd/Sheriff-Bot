@@ -64,8 +64,8 @@ async def on_message(message):
         thing = random.randint(1, 255)
         await message.channel.send(thing)
         
-    if "no u" in message.content:
-        await message.content.send("NO U!")
+    if 'no u' in message.content:
+        await message.channel.send("NO YOU!")
 #Rock Paper Scissors of HELL
     if message.content.startswith("$rps"):
         if "Scissors" in message.content:
