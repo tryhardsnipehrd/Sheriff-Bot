@@ -8,6 +8,8 @@ happy = ["Be you... If someone doesn't like it, tell them to Fuck off...","I bel
 
 rps1 = ["Rock", "Paper", "Scissors"]
 
+wins = 0
+
 bot = commands.Bot(command_prefix='$')
 
 @bot.event
@@ -63,10 +65,42 @@ async def on_message(message):
         await message.channel.send(thing)
         thing = random.randint(1, 255)
         await message.channel.send(thing)
-        
-    if 'no u' in message.content:
-        await message.channel.send("NO YOU!")
-
+    
+    if "no u" in message.content:
+        await message.content.send("NO U!")
+#Rock Paper Scissors of HELL
+    if message.content.startswith(".rps"):
+        if "Scissors" in message.content:
+            rps2 = random.choice(rps)
+            await message.channel.send(f"I chose {rps2} and you chose scissors!")
+            if rps2 == "Scissors":
+                await message.channel.send("DRAW")
+            elif rps2 == "Paper":
+                await message.channel.send("I can't believe you beat me...")
+            elif rps2 == "Rock":
+                await message.channel.send("I WIN!!!")
+            else:
+                await message.channel.send("How did you get this?")
+        elif "Paper" in message.content:
+            rps2 = random.choice(rps)
+            await message.channel.send(f"I chose {rps2} and you chose Paper!")
+            if rps2 == "Paper":
+                await message.channel.send("DRAW")
+            elif rps2 == "Rock":
+                await message.channel.send("I can't believe you beat me...")
+            elif rps2 == "Scissors":
+                await message.channel.send("I WIN!!!")
+        elif "Rock" in message.content:
+            rps2 = random.choice(rps)
+            await message.channel.send(f"I chose {rps2} and you chose Rock!")
+            if rps2 == "Rock":
+                await message.channel.send("DRAW")
+            elif rps2 == "Scissors":
+                await message.channel.send("I can't believe you beat me...")
+            elif rps2 == "Paper":
+                await message.channel.send("I WIN!!!")
+        else:
+            await message.channel.send("Please use a valid Rock Paper or Scissor...")
     
     await bot.process_commands(message)
 
@@ -96,6 +130,12 @@ async def optimist(ctx):
     """When you are having a bad day..."""
     await ctx.author.send(random.choice(happy))
 
+@commands.command()
+@commands.has_permissions(manage_messages=True)
+async def purge(ctx: commands.Context, limit: int = 100) -> None:
+  """ Removes X messages in channel.(MOD ONLY) """
+  await ctx.channel.purge(limit=int(limit))
+
 @bot.command()
 async def color(ctx):
     """Get a random color in RGB values!"""
@@ -106,7 +146,7 @@ async def color(ctx):
     await ctx.send(thing)
     thing = random.randint(1, 255)
     await ctx.send(thing)
-    
+
 @bot.command()
 async def rps(ctx, arg):
     """Rock Paper Scissors!"""
@@ -120,7 +160,8 @@ async def rps(ctx, arg):
             await ctx.send(f"Y-You beat me... Congratulations {ctx.author.mention}...")
             
         if rps2 == "Rock":
-            await ctx.send(f"And yet another victory for me!")
+            wins = wins + 1
+            await ctx.send(f"And yet another victory for me!/nI am now up to {wins} Wins!")
             
 
     if arg == "Paper":
@@ -128,8 +169,9 @@ async def rps(ctx, arg):
             await ctx.send(f"We seem to have tied, {ctx.author.mention}")
 
         if rps2 == "Scissors":
-            await ctx.send(f"And yet another victory for me!")
-            
+            wins = wins + 1
+            await ctx.send(f"And yet another victory for me!/nI am now up to {wins} Wins!")
+           
 
         if rps2 == "Rock":
             await ctx.send(f"Y-You beat me... Congratulations {ctx.author.mention}")
@@ -139,12 +181,13 @@ async def rps(ctx, arg):
             await ctx.send(f"We seem to have tied, {ctx.author.mention}")
         
         if rps2 == "Paper":
-            
-            await ctx.send(f"Another win for me!")
+            wins = wins + 1
+            await ctx.send(f"Another win for me!/nI am now up to {wins} Wins!")
             
 
         if rps2 == "Scissors":
             await ctx.send(f"Y-You beat me... Congratulations {ctx.author.mention}")
+
 
 bot.run(os.environ["DISCORD_TOKEN"])
 
