@@ -151,6 +151,16 @@ async def optimist(ctx):
 async def purge(ctx: commands.Context, limit: int = 100) -> None:
   """ Removes X messages in channel.(MOD ONLY) """
   await ctx.channel.purge(limit=int(limit))
+    
+@bot.command()
+async def goodcop(ctx):
+    """makes good cop"""
+    bot.load_extension("cogs")
+
+@bot.command()
+async def clear(ctx):
+    """clears cogs"""
+    bot.unload_extension("cogs")
 
 @bot.command()
 async def color(ctx):
