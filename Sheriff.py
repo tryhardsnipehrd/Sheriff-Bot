@@ -49,6 +49,15 @@ async def on_message(message):
     if 'sheriff' in message.content:
         await ctx.trigger_typing()
         await message.channel.send("What do you want?? He is busy right now")
+        
+    if 'kill me' in message.content.lower():
+        if "Badcop" in bot.cogs.keys():
+            await message.delete()
+            await message.channel.send("Keep going and I just might...")
+        if "Goodcop" in bot.cogs.keys():
+            await message.delete()
+            await message.channel.send("I don't like when people say that...")
+
 
     if 'Yuri' in message.content:
         await ctx.trigger_typing()
@@ -155,13 +164,26 @@ async def purge(ctx: commands.Context, limit: int = 100) -> None:
 @bot.command()
 async def goodcop(ctx):
     """makes good cop"""
-    bot.load_extension("cogs")
+    if "Goodcop" not in bot.cogs.keys():
+        if "Badcop" in bot.cogs.keys():
+            bot.unload_extension("Badcop")
+        bot.load_extension("Goodcop")    
+
+@bot.command()
+async def badcop(ctx):
+    """makes bad cop"""
+    if "Badcop" not in bot.cogs.keys():
+        if "Goodcop" in bot.cogs.keys():
+            bot.unload_extension("Goodcop")
+        bot.load_extension("Badcop")    
 
 @bot.command()
 async def clear(ctx):
     """clears cogs"""
-    bot.unload_extension("cogs")
-
+    if "Goodcop" in bot.cogs.keys():
+        bot.unload_extension("Goodcop")
+    if "Badcop" in bot.cogs.keys():
+        bot.unload_extension("Badcop")
 @bot.command()
 async def color(ctx):
     """Get a random color in RGB values!"""
