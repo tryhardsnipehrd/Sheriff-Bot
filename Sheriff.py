@@ -24,7 +24,6 @@ async def on_message(message):
 
     
     if message.content.startswith('$invite'):
-        await ctx.trigger_typing()
         await message.channel.send('https://discordapp.com/oauth2/authorize?client_id=668932488068071427&scope=bot&permissions=8')
    
     if message.content.startswith('$oops'):
