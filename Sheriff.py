@@ -61,6 +61,9 @@ async def setup(ctx, arg):
     elif arg.lower() == "speedrun":
         if "speedrun" not in bot.cogs.keys():
             bot.load_extension("speedrun")
+    elif arg.lower() == "main":
+        if "main" not in bot.cogs.keys():
+            bot.load_extension("main")
     else:
         for i in bot.cogs.keys():
             bot.unload_extension(i)
