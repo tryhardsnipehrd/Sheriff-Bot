@@ -64,7 +64,7 @@ async def setup(ctx, arg):
     elif arg.lower() == "main":
         if "main" not in bot.cogs.keys():
             bot.load_extension("main")
-    else:
+    elif arg == None:
         for i in bot.cogs.keys():
             bot.unload_extension(i)
 
