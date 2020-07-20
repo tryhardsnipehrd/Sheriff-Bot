@@ -72,7 +72,7 @@ async def setup(ctx, arg=None):
 @bot.command()
 async def invite(ctx):
     """invite Me!!!"""
-    ctx.send("https://discord.com/oauth2/authorize?client_id=668932488068071427&permissions=8&scope=bot")
+    await ctx.send("https://discord.com/oauth2/authorize?client_id=668932488068071427&permissions=8&scope=bot")
 
 
 
