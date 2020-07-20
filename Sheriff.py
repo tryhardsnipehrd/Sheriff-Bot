@@ -53,19 +53,18 @@ async def purge(ctx: commands.Context, limit: int = 100) -> None:
     
 @bot.command()
 @commands.has_permissions(administrator=True)
-async def setup(ctx, arg):
+async def setup(ctx, arg=None):
     """setup bot for server"""
-    try:
-        if arg.lower() == "ddlc":
-            if "ddlc" not in bot.cogs.keys():
-                bot.load_extension("ddlc")
-        elif arg.lower() == "speedrun":
-            if "speedrun" not in bot.cogs.keys():
-                bot.load_extension("speedrun")
-        elif arg.lower() == "main":
-            if "main" not in bot.cogs.keys():
-                bot.load_extension("main")
-    except:
+    if arg.lower() == "ddlc":
+        if "ddlc" not in bot.cogs.keys():
+            bot.load_extension("ddlc")
+    elif arg.lower() == "speedrun":
+        if "speedrun" not in bot.cogs.keys():
+            bot.load_extension("speedrun")
+    elif arg.lower() == "main":
+        if "main" not in bot.cogs.keys():
+            bot.load_extension("main")
+    elif arg == None:
         for i in bot.cogs.keys():
             bot.unload_extension(i)
 
