@@ -46,7 +46,7 @@ async def cogs(ctx):
 
 
 @commands.command()
-@commands.has_permissions(manage_messages=True)
+@commands.has_permissions(administrator=True)
 async def purge(ctx: commands.Context, limit: int = 100) -> None:
   """ Removes X messages in channel.(MOD ONLY) """
   await ctx.channel.purge(limit=int(limit))
