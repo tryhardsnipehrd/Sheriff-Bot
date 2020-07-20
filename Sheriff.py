@@ -52,7 +52,7 @@ async def purge(ctx: commands.Context, limit: int = 100) -> None:
   await ctx.channel.purge(limit=int(limit))
     
 @bot.command()
-@commands.has_permissions(manage_members=True)
+@commands.has_permissions(administrator=True)
 async def setup(ctx, arg):
     """setup bot for server"""
     if arg.lower() == "ddlc":
