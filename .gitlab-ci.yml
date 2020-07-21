@@ -1,4 +1,4 @@
 job:
     script: 
     - "cd $HOME"
-    - "$HOME/update.sh"
+    - "$HOME/restart.sh"
