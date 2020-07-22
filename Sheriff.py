@@ -21,9 +21,9 @@ async def on_message(message):
 
 
 @bot.command()
-async def test(ctx, arg):
+async def test(ctx):
     await ctx.trigger_typing()
-    await ctx.send(arg)
+    await ctx.send("yes")
 
 @bot.command()
 async def greet(ctx, arg):
