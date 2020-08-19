@@ -26,10 +26,10 @@ async def test(ctx):
     await ctx.send("yes")
 
 @bot.command()
-async def greet(ctx, arg):
+async def greet(ctx):
     """Have me greet the mentioned user!"""
     await ctx.trigger_typing()
-    await ctx.send(f"Hello {arg}!")
+    await ctx.send("Hello!")
 
 @bot.command()
 async def hello(ctx):
