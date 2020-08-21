@@ -11,7 +11,7 @@ now = datetime.datetime.now()
 
 
 @bot.event
-async def on_ready():
+async def on_ready(bot):
     print('We have logged in as {0.user}'.format(bot))
     print(now)
     await bot.cogs.load_extension("ddlc")
