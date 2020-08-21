@@ -13,7 +13,7 @@ now = datetime.datetime.now
 @bot.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
-    print("At ",now)
+    print(now)
     
 @bot.event
 async def on_message(message):
