@@ -24,6 +24,11 @@ async def on_message(message):
         return
     
     await bot.process_commands(message)
+@bot.command()
+async def help(ctx):
+    if ctx.guild.id == 645697605829001217:
+            await ctx.send("This command is in development! Stay tuned!")
+    el
 
 
 
