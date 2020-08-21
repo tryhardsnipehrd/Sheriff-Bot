@@ -33,10 +33,7 @@ class main(commands.Cog):
         else:
             await ctx.send("is not available here.")
     
-    @commands.command(name="help")
-    async def main(self, ctx):
-        if ctx.guild.id == 645697605829001217:
-            await ctx.send("This command is in development! Stay tuned!")
+
     
     @commands.Cog.listener()
     async def on_member_ban(self, guild, user):
