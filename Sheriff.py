@@ -59,7 +59,7 @@ async def invite(ctx):
     """invite Me!!!"""
     await ctx.send("https://discord.com/oauth2/authorize?client_id=668932488068071427&permissions=8&scope=bot")
     
-@bot.event()
+@bot.event
 async def on_command_error(ctx, error):
      if isintance(error, commands.CommandNotFound):
          ctx.send("Command not found. Please check your spelling and try again!")
