@@ -31,7 +31,7 @@ class ddlc(commands.Cog):
         
     @commands.command(name="ddlc")
     async def ddlc(self, ctx):
-        if self.guild.id = 593211246510080000:
+        if self.guild.id == 593211246510080000:
             await ctx.send("is currently loaded and working")
     
     @commands.command(name="delete")
@@ -48,7 +48,7 @@ class ddlc(commands.Cog):
         http://discordpy.readthedocs.io/en/rewrite/api.html#discord.on_member_ban
         Check above for a list of events.
         """
-        if self.guild.id = 593211246510080000:
+        if self.guild.id == 593211246510080000:
             guild.get_channel(596612034091679764).send(f'sadly, {user.name}-{user.id} was banned from {guild.name}-{guild.id} for unknown reasons...')
 
 # The setup fucntion below is neccesarry. Remember we give bot.add_cog() the name of the class in this case SimpleCog.
