@@ -61,7 +61,7 @@ async def invite(ctx):
     
 @bot.event
 async def on_command_error(ctx, error):
-     if isintsance(error, commands.CommandNotFound):
+     if isinstance(error, commands.CommandNotFound):
          ctx.send("Command not found. Please check your spelling and try again!")
 
 
