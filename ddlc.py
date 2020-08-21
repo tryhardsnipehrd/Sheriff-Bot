@@ -39,6 +39,10 @@ class ddlc(commands.Cog):
     @commands.command(name="delete")
     async def delete(self, ctx):
         await ctx.message.delete()
+        
+    @commands.command(name="help")
+    async def  help(self, ctx):
+        await ctx.send("This command is currently in development! Stay tuned!")
 
     
     @commands.Cog.listener()
