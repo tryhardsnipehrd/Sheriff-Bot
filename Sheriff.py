@@ -7,7 +7,7 @@ import datetime
 
 bot = commands.Bot(command_prefix='$')
 
-now = datetime.datetime.now
+now = datetime.datetime.now()
 
 
 @bot.event
