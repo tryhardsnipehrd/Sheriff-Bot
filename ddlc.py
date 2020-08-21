@@ -40,10 +40,7 @@ class ddlc(commands.Cog):
     async def delete(self, ctx):
         await ctx.message.delete()
         
-    @commands.command(name="help")
-    async def help(self, ctx):
-        if ctx.guild.id == 593211246510080000:
-            await ctx.send("This command is currently in development! Stay tuned!")
+    
 
     
     @commands.Cog.listener()
