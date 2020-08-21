@@ -28,6 +28,11 @@ class ddlc(commands.Cog):
         """A simple command which only responds to the owner of the bot."""
 
         await ctx.send(f'Hello {ctx.author.mention}. This command can only be used by you!!')
+        
+    @commands.command(name="ddlc")
+    async def ddlc(self, ctx):
+        if self.guild.id = 593211246510080000:
+            await ctx.send("is currently loaded and working")
     
     @commands.command(name="delete")
     async def delete(self, ctx):
