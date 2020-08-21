@@ -22,16 +22,9 @@ class main(commands.Cog):
     
   
 
-    @commands.command(name='admin')
-    @commands.has_role("Owner")
-    async def only_me(self, ctx):
-        """A simple command which only responds to the owner of the bot."""
-
-        await ctx.send(f'Hello {ctx.author.mention}. This command can only be used by you!!')
+   
     
-    @commands.command(name="delete")
-    async def delete(self, ctx):
-        await ctx.message.delete()
+
     
     @commands.command(name="name")
     async def main(self, ctx):
