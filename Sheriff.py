@@ -7,13 +7,13 @@ import datetime
 
 bot = commands.Bot(command_prefix='$')
 
-now = str(datetime.datetime.now)
+now = datetime.datetime.now
 
 
 @bot.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
-    print("At " + now)
+    print("At ",now)
     
 @bot.event
 async def on_message(message):
