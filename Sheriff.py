@@ -14,6 +14,7 @@ now = datetime.datetime.now()
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
     print(now)
+    bot.cogs.load_extension("ddlc")
     
 @bot.event
 async def on_message(message):
