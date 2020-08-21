@@ -31,7 +31,7 @@ class ddlc(commands.Cog):
         
     @commands.command(name="ddlc")
     async def ddlc(self, ctx):
-        if self.guild.id == 593211246510080000:
+        if ctx.guild.id == 593211246510080000:
             await ctx.send("is currently loaded and working")
         else:
             await ctx.send("is not available in this server")
