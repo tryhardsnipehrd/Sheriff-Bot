@@ -43,8 +43,8 @@ class ddlc(commands.Cog):
         http://discordpy.readthedocs.io/en/rewrite/api.html#discord.on_member_ban
         Check above for a list of events.
         """
-
-        print(f'sadly, {user.name}-{user.id} was banned from {guild.name}-{guild.id} for unknown reasons...')
+        if self.guild.id = 593211246510080000:
+            guild.get_channel(596612034091679764).send(f'sadly, {user.name}-{user.id} was banned from {guild.name}-{guild.id} for unknown reasons...')
 
 # The setup fucntion below is neccesarry. Remember we give bot.add_cog() the name of the class in this case SimpleCog.
 # When we load the cog, we use the name of the file.
