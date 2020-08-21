@@ -33,6 +33,8 @@ class ddlc(commands.Cog):
     async def ddlc(self, ctx):
         if self.guild.id == 593211246510080000:
             await ctx.send("is currently loaded and working")
+        else:
+            await ctx.send("is not available in this server")
     
     @commands.command(name="delete")
     async def delete(self, ctx):
