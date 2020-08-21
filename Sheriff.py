@@ -28,7 +28,8 @@ async def on_message(message):
 async def help(ctx):
     if ctx.guild.id == 645697605829001217:
             await ctx.send("This command is in development! Stay tuned!")
-    el
+    elif ctx.guild.id == 593211246510080000:
+            await ctx.send("This command is currently in development! Stay tuned!")
 
 
 
