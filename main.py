@@ -32,6 +32,13 @@ class main(commands.Cog):
     @commands.command(name="delete")
     async def delete(self, ctx):
         await ctx.message.delete()
+    
+    @commands.command(name="name")
+    async def main(self, ctx):
+        if ctx.guild.id == 645697605829001217:
+            await ctx.send("At your service!")
+        else:
+            await ctx.send("is not available here.")
 
     
     @commands.Cog.listener()
