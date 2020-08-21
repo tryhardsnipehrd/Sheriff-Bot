@@ -3,12 +3,14 @@ import typing
 import random
 import os
 from discord.ext import commands
+import datetime
 
 bot = commands.Bot(command_prefix='$')
 
 @bot.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
+    print("At "+datetime.datetime.now())
     
 @bot.event
 async def on_message(message):
