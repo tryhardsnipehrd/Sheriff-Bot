@@ -27,9 +27,14 @@ async def on_message(message):
 @bot.command()
 async def help(ctx):
     if ctx.guild.id == 645697605829001217:
-            await ctx.send("This command is in development! Stay tuned!")
+        embed=discord.Embed(title="About",description="Information About Me And My Developers, Supporters.",color=discord.Color.red())
+   embed.add_field(name="Programming",value="[ TADBO#4659 ]",inline=False)
+   embed.add_field(name="Development Supporters",value="myself",inline=False)
+   embed.add_field(name="Written In",value="Python, Discord.PY",inline=False)
+        await ctx.send("This command is in development! Stay tuned!")
+        await ctx.send(embed=embed)
     elif ctx.guild.id == 593211246510080000:
-            await ctx.send("This command is currently in development! Stay tuned!")
+        await ctx.send("This command is currently in development! Stay tuned!")
 
 
 
