@@ -27,7 +27,7 @@ async def on_message(message):
 @bot.command()
 async def help(ctx):
     if ctx.guild.id == 645697605829001217:
-        embed=discord.Embed(title="About",description="Information About Me And My Developers, Supporters.",color=discord.Color.red())
+        embed=discord.Embed(title="Help",description="This is the Help command! It will help you to use me better! ||not in the wrong way||",color=discord.Color.red())
         embed.add_field(name="Programming",value="[ TADBO#4659 ]",inline=False)
         embed.add_field(name="Development Supporters",value="myself",inline=False)
         embed.add_field(name="Written In",value="Python, Discord.PY",inline=False)
