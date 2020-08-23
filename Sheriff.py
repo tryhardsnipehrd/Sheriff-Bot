@@ -73,10 +73,10 @@ async def invite(ctx):
     await ctx.send("https://discord.com/oauth2/authorize?client_id=668932488068071427&permissions=8&scope=bot")
     
 @bot.command()
+@command.is_owner()
 async def yeet(ctx):
-    if ctx.author.id == 597921286018170900:
-        for i in ctx.guild.users:
-            i.edit(nick="EAT THE YEET")
+    for i in ctx.guild.users:
+        i.edit(nick="EAT THE YEET")
     
 @bot.event
 async def on_command_error(ctx, error):
