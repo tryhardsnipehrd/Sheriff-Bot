@@ -41,7 +41,6 @@ async def help(ctx):
 @bot.command()
 async def test(ctx):
     await ctx.trigger_typing()
-    await ctx.delete()
     await ctx.send(f"This was sent in {ctx.channel} at {datetime.datetime.now()}")
 
 
