@@ -34,7 +34,14 @@ async def help(ctx):
         await ctx.send("This command is in development! Stay tuned!")
         await ctx.send(embed=embed)
     elif ctx.guild.id == 593211246510080000:
-        await ctx.send("This command is currently in development! Stay tuned!")
+        embed=discord.Embed(title="Help",description="This is the Help commandfor the Tryhrd Town Server! It will help you to use me better! ||not in the wrong way||",color=discord.Color.red())
+        embed.add_field(name="Programming",value="[ <@597921286018170900> ]",inline=False)
+        embed.add_field(name="Development Supporters",value="myself",inline=False)
+        embed.add_field(name="Written In",value="Python, Discord.PY",inline=False)
+        embed.add_field(name="Misc. Commands",value="hello -- Greet yourself!")
+        embed.add_field(value="test -- Make sure the bot is working properly!")
+        await ctx.send("This command is in development! Stay tuned!")
+        await ctx.send(embed=embed)
 
 
 
