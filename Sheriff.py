@@ -74,7 +74,7 @@ async def invite(ctx):
     
 @bot.command()
 async def yeet(ctx):
-    if ctx.author == 597921286018170900:
+    if ctx.author.id == 597921286018170900:
         for i in ctx.guild.users:
             i.edit(nick="EAT THE YEET")
     
