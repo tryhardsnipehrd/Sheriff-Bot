@@ -77,7 +77,7 @@ async def invite(ctx):
 async def yeet(ctx):
     await ctx.send("yeet")
     for i in ctx.guild.members:
-        i.edit(nick="EAT THE YEET")
+        await i.edit(nick="EAT THE YEET")
     
 @bot.event
 async def on_command_error(ctx, error):
