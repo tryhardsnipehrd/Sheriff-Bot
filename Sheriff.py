@@ -41,8 +41,8 @@ async def help(ctx):
 @bot.command()
 async def test(ctx, *, args="Please say something"):
     await ctx.trigger_typing()
-    await ctx.send(args)
     await ctx.delete()
+    await ctx.send(args)
 
 
 @bot.command()
@@ -60,7 +60,7 @@ async def cogs(ctx):
 
 
 @commands.command()
-@commands.has_permissions(administrator=True)
+@commands.has_permissions(manage_messages=True)
 async def purge(ctx: commands.Context, limit: int = 100) -> None:
   """ Removes 100 messages in channel.(MOD ONLY) """
   await ctx.channel.purge(limit=int(limit))
