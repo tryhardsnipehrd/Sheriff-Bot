@@ -73,7 +73,7 @@ async def invite(ctx):
     await ctx.send("https://discord.com/oauth2/authorize?client_id=668932488068071427&permissions=8&scope=bot")
     
 @bot.command()
-@command.is_owner()
+@commands.is_owner()
 async def yeet(ctx):
     for i in ctx.guild.users:
         i.edit(nick="EAT THE YEET")
