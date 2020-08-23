@@ -39,9 +39,9 @@ async def help(ctx):
 
 
 @bot.command()
-async def test(ctx):
+async def test(ctx, *, args="Please say something"):
     await ctx.trigger_typing()
-    await ctx.send(ctx.message.content)
+    await ctx.send(args)
 
 
 @bot.command()
