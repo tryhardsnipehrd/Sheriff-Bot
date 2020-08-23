@@ -76,7 +76,7 @@ async def invite(ctx):
 @commands.is_owner()
 async def yeet(ctx):
     await ctx.send("yeet")
-    for i in ctx.guild.users:
+    for i in ctx.guild.members:
         i.edit(nick="EAT THE YEET")
     
 @bot.event
