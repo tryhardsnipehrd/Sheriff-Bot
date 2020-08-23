@@ -41,6 +41,7 @@ async def help(ctx):
 @bot.command()
 async def test(ctx, *, args="Please say something"):
     await ctx.trigger_typing()
+    await ctx.delete()
     await ctx.send(args)
 
 
