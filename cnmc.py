@@ -15,7 +15,7 @@ class cnmc(commands.Cog):
         if ctx.guild.id == 745985920116850781:
             f=open("player.txt","r+")
             lines=f.readlines()
-            lines[0] = "test"
+            
             
             
             if player == None:
