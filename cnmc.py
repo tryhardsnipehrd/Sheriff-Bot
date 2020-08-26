@@ -15,7 +15,8 @@ class cnmc(commands.Cog):
             if player == None:
                 player = ctx.author.mention
             
-            embed=discord.Embed(title="Username",description=f"[ {player} ]",color=discord.Color.purple())
+            embed=discord.Embed(title="Username",description=f"{player}",color=discord.Color.purple())
+            embed.add_field(name="", value=f"{player.nick}"
             embed.add_field(name="Country",value="United States of America",inline=False)
             embed.add_field(name="Wins",value="0",inline=False)
             embed.add_field(name="Sent By",value=player, inline=False)
