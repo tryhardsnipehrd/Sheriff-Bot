@@ -48,7 +48,7 @@ async def help(ctx):
 
 @bot.command()
 async def test(ctx):
-    if ctx.guild.id == 645697605829001217:
+    if ctx.guild.id == 745985920116850781:
         embed=discord.Embed(title="Username",description="[ <@597921286018170900> ]",color=discord.Color.purple())
         embed.add_field(name="Country",value="United States of America",inline=False)
         embed.add_field(name="Wins",value="0",inline=False)
