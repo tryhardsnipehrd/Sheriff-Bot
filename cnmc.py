@@ -9,8 +9,12 @@ class cnmc(commands.Cog):
         self.bot = bot
         
     @commands.command("thingy")
-    async def playerinfo(self, ctx, player = ctx.author):
+    async def playerinfo(self, ctx, player = None):
         if ctx.guild.id == 745985920116850781:
+            if player = None:
+                player = ctx.author
+            else: 
+                player = player.strip("<>@!")
             embed=discord.Embed(title="Username",description="[ <@597921286018170900> ]",color=discord.Color.purple())
             embed.add_field(name="Country",value="United States of America",inline=False)
             embed.add_field(name="Wins",value="0",inline=False)
