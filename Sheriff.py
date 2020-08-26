@@ -53,7 +53,7 @@ async def test(ctx):
         embed.add_field(name="Wins",value="0",inline=False)
         embed.add_field(name="Written In",value="Python, Discord.PY",inline=False)
         await ctx.send("This command is in development! Stay tuned!")
-        await ctx.send(embed=embed
+        await ctx.send(embed=embed)
 
 
 #@bot.command()
