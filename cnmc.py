@@ -10,7 +10,7 @@ class cnmc(commands.Cog):
         
     @commands.command("thingy")
     async def thingy(self, ctx):
-      ctx.send("I am online and working")
+        await ctx.send("I am online and working")
         
         
         
