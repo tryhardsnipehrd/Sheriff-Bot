@@ -56,11 +56,11 @@ async def test(ctx):
         await ctx.send(embed=embed
 
 
-@bot.command()
-async def hello(ctx):
-    """Greet yourself!"""
-    await ctx.trigger_typing()
-    await ctx.send(f'Hello {ctx.author.mention}!')
+#@bot.command()
+#async def hello(ctx):
+ #   """Greet yourself!"""
+  #  await ctx.trigger_typing()
+   # await ctx.send(f'Hello {ctx.author.mention}!')
 
 @bot.command()
 async def cogs(ctx):
