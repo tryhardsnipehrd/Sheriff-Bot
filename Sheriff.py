@@ -47,8 +47,13 @@ async def help(ctx):
 
 @bot.command()
 async def test(ctx):
-    await ctx.trigger_typing()
-    await ctx.send(f"This was sent in {ctx.channel} at {datetime.datetime.now()}")
+    if ctx.guild.id == 645697605829001217:
+        embed=discord.Embed(title="Username",description="[ <@597921286018170900> ]",color=discord.Color.purple())
+        embed.add_field(name="Country",value="United States of America",inline=False)
+        embed.add_field(name="Wins",value="0",inline=False)
+        embed.add_field(name="Written In",value="Python, Discord.PY",inline=False)
+        await ctx.send("This command is in development! Stay tuned!")
+        await ctx.send(embed=embed
 
 
 @bot.command()
