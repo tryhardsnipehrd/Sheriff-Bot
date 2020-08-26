@@ -9,8 +9,14 @@ class cnmc(commands.Cog):
         self.bot = bot
         
     @commands.command("thingy")
-    async def thingy(self, ctx):
-        await ctx.send("I am online and working")
+    async def playerinfo(self, ctx, player = ctx.author):
+        if ctx.guild.id == 745985920116850781:
+        embed=discord.Embed(title="Username",description="[ <@597921286018170900> ]",color=discord.Color.purple())
+        embed.add_field(name="Country",value="United States of America",inline=False)
+        embed.add_field(name="Wins",value="0",inline=False)
+        embed.add_field(name="Sent By",value=player, inline=False)
+        await ctx.send("This command is in development! Stay tuned!")
+        await ctx.send(embed=embed)
         
         
         
