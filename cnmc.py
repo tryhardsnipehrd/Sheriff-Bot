@@ -19,12 +19,18 @@ class cnmc(commands.Cog):
             embed.add_field(name="Player", value = f"{player.mention}", inline = False)
             embed.add_field(name="Nickname", value=f"**{player.display_name}**", inline = False)
             
-            if player.id == 597921286018170900:
+            if player.id == 597921286018170900: #Tadbo
                 embed.add_field(name="Country",value="United States of America",inline=False)
             
             
             else:
-                embed.add_field(name="Country",value="Test success",inline=False)
+                embed.add_field(name="Country",value="Node 3",inline=False)
+                
+            if player.id == 597921286018170900: #Tadbo
+                embed.add_field(name="Birthday", value="March 28th", inline=False)
+                
+            else:
+                embed.add_field(name="Birthday", value="I... don't rememeber...", inline=False)
             embed.add_field(name="Wins",value="0",inline=False)
             embed.add_field(name="Sent By",value=player, inline=False)
             await ctx.send(player.id)
