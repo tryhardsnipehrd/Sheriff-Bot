@@ -11,7 +11,7 @@ class cnmc(commands.Cog):
     @commands.command("thingy")
     async def playerinfo(self, ctx, player = None):
         if ctx.guild.id == 745985920116850781:
-            if player = None:
+            if player == None:
                 player = ctx.author
             else: 
                 player = player.strip("<>@!")
