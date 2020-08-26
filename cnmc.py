@@ -15,4 +15,4 @@ class cnmc(commands.Cog):
         
         
 def setup(bot):
-    bot.add_cog(ddlc(bot))
+    bot.add_cog(cnmc(bot))
