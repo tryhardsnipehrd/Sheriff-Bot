@@ -21,7 +21,7 @@ class cnmc(commands.Cog):
             embed.add_field(name="Country",value="United States of America",inline=False)
             embed.add_field(name="Wins",value="0",inline=False)
             embed.add_field(name="Sent By",value=player, inline=False)
-            await ctx.send("This command is in development! Stay tuned!")
+            await ctx.send(player)
             await ctx.send(embed=embed)
         
         
