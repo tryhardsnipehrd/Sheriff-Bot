@@ -8,7 +8,7 @@ class cnmc(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         
-        f=open("/home/sheriff/Sheriff-Bot/players.txt","r+")
+        f=open("player.txt","r+")
         lines=f.readlines()
         lines[0] = "test"
         f.seek(0)
