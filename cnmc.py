@@ -16,7 +16,7 @@ class cnmc(commands.Cog):
                 player = ctx.author
             
             embed=discord.Embed(title="Username",description=f"{player.mention}",color=discord.Color.purple())
-            embed.add_field(name="", value=f"**{player.display_name}**", inline = False)
+            embed.add_field(name="Nickname", value=f"**{player.display_name}**", inline = False)
             embed.add_field(name="Country",value="United States of America",inline=False)
             embed.add_field(name="Wins",value="0",inline=False)
             embed.add_field(name="Sent By",value=player, inline=False)
