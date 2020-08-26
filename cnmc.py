@@ -11,11 +11,11 @@ class cnmc(commands.Cog):
     @commands.command("playerinfo")
     async def playerinfo(self, ctx, player = None):
         if ctx.guild.id == 745985920116850781:
+            
             if player == None:
                 player = ctx.author
-            else: 
-                player = player.strip("<>@!")
-            embed=discord.Embed(title="Username",description=f"[ <@{ctx.author.id}> ]",color=discord.Color.purple())
+            
+            embed=discord.Embed(title="Username",description=f"[ <@{player.id}> ]",color=discord.Color.purple())
             embed.add_field(name="Country",value="United States of America",inline=False)
             embed.add_field(name="Wins",value="0",inline=False)
             embed.add_field(name="Sent By",value=player, inline=False)
