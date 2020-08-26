@@ -18,7 +18,8 @@ class cnmc(commands.Cog):
             embed=discord.Embed(title="Player Info!",description=f"This is the player card of {player.display_name}",color=discord.Color.purple())
             embed.add_field(name="Player", value = f"{player.mention}", inline = False)
             embed.add_field(name="Nickname", value=f"**{player.display_name}**", inline = False)
-            if player == "TADBO#4659":
+            
+            if player.id == 597921286018170900:
                 embed.add_field(name="Country",value="United States of America",inline=False)
             
             
