@@ -26,7 +26,7 @@ class cnmc(commands.Cog):
                 embed.add_field(name="Country",value="Test success",inline=False)
             embed.add_field(name="Wins",value="0",inline=False)
             embed.add_field(name="Sent By",value=player, inline=False)
-            await ctx.send(player)
+            await ctx.send(player.id)
             await ctx.send(embed=embed)
         
         
