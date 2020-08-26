@@ -8,7 +8,7 @@ class cnmc(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         
-    @commands.command("thingy")
+    @commands.command("playerinfo")
     async def playerinfo(self, ctx, player = None):
         if ctx.guild.id == 745985920116850781:
             if player == None:
