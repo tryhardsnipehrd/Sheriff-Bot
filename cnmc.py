@@ -9,13 +9,13 @@ class cnmc(commands.Cog):
         self.bot = bot
         
     @commands.command("playerinfo")
-    async def playerinfo(self, ctx, player = None):
+    async def playerinfo(self, ctx, player: discord.Member = None):
         if ctx.guild.id == 745985920116850781:
             
             if player == None:
-                player = ctx.author.mention
+                player = ctx.author
             
-            embed=discord.Embed(title="Username",description=f"{player}",color=discord.Color.purple())
+            embed=discord.Embed(title="Username",description=f"{player.mention}",color=discord.Color.purple())
             embed.add_field(name="", value=f"**{player.nick}**", inline = False)
             embed.add_field(name="Country",value="United States of America",inline=False)
             embed.add_field(name="Wins",value="0",inline=False)
