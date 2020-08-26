@@ -8,6 +8,13 @@ class cnmc(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         
+        f=open("players.txt","r+")
+        lines=f.readlines()
+        lines[0] = "test"
+        f.seek(0)
+        f.truncate() # make sure we don't leave trailing garbage if the new text is shorter than old one
+        f.write(''.join(lines))
+        
     @commands.command("playerinfo")
     async def playerinfo(self, ctx, player: discord.Member = None):
         if ctx.guild.id == 745985920116850781:
@@ -33,7 +40,7 @@ class cnmc(commands.Cog):
                 embed.add_field(name="Birthday", value="I... don't rememeber...", inline=False)
             embed.add_field(name="Wins",value="0",inline=False)
             embed.add_field(name="Sent By",value=player, inline=False)
-            await ctx.send(player.id)
+            await ctx.send(lines[0])
             await ctx.send(embed=embed)
         
         
