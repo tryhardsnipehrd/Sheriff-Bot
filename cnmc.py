@@ -13,7 +13,7 @@ class cnmc(commands.Cog):
         if ctx.guild.id == 745985920116850781:
             
             if player == None:
-                player = ctx.author
+                player = ctx.author.mention
             
             embed=discord.Embed(title="Username",description=f"[ {player} ]",color=discord.Color.purple())
             embed.add_field(name="Country",value="United States of America",inline=False)
