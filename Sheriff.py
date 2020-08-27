@@ -48,7 +48,7 @@ async def help(ctx):
 
 @bot.command()
 async def test(ctx):
-    await ctx.delete()
+    ctx.delete()
     await ctx.send("I am alive you know...")
 
 
