@@ -72,7 +72,7 @@ async def test(ctx):
     # If the reacted emoji is the X:
     elif reaction.emoji == "✖️":
         # We delete the messages
-        await ini.delete()
+        # await ini.delete()
         await msg.delete()
 
 
