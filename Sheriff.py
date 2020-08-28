@@ -64,14 +64,14 @@ async def test(ctx):
     reaction, user = await bot.wait_for('reaction_add')
 
     # If the reacted emoji is the checkmark:
-    if reaction.emoji == "✔️":
+    if reaction.emoji == "✔️" and bot.user != ctx.message.author:
         # Clear the reactions from the original message
         await msg.clear_reactions()
         # Edit it to display some other content
         await msg.edit(content="Here are the results")
 
     # If the reacted emoji is the X:
-    elif reaction.emoji == "✖️":
+    elif reaction.emoji == "✖️" and bot.user != ctx.message.author:
         # We delete the messages
         # await ini.delete()
         await msg.delete()
