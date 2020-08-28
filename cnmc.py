@@ -46,6 +46,12 @@ class cnmc(commands.Cog):
             await ctx.send(embed=embed)
         
         
+    @bot.command(name = 'addpoints')
+    async def addpoints(ctx member : Discord.Member):
+    point = int(member.nick[1]) + 1
+    name = member.nick[4:]
+    await edit(nick = f'[{point}] {name}')
+        
         
 def setup(bot):
     bot.add_cog(cnmc(bot))
