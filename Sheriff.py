@@ -47,7 +47,7 @@ async def help(ctx):
         
 
 
-@bot.event()
+@bot.event
 async def on_raw_reaction_add(payload):
 
     roles = [[748992549619892274, 748992549619892274], [748992549619892274, 748992549619892274],
