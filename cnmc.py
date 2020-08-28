@@ -50,7 +50,7 @@ class cnmc(commands.Cog):
     async def addpoints(self, ctx, member : discord.Member):
         point = int(member.nick[1]) + 1
         name = member.nick[4:]
-        await edit(nick = f'[{point}] {name}')
+        await member.edit(nick = f'[{point}] {name}')
         
         
 def setup(bot):
