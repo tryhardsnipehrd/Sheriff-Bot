@@ -53,6 +53,7 @@ async def test(ctx):
     
     # Put your to be reaction added emojis in an iterable:
     reactions = ('✔️', '✖️')
+    msg.clear_reactions()
     
     # If we want to add multiple emoji's to a message, we have to loop
     # over each emoji in the reactions tuple, and react with it to the msg:
@@ -74,6 +75,7 @@ async def test(ctx):
         # We delete the messages
         # await ini.delete()
         await msg.delete()
+        await ctx.send("no")
 
 
 #@bot.command()
