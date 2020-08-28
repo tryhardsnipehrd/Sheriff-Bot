@@ -55,7 +55,7 @@ async def on_raw_reaction_add(payload):
              [748992549619892274, 748992549619892274]]
 
     reactions = [":heart:", ":yellow_heart:", ":green_heart:", ":blue_heart:", ":purple_heart:"]
-    message_id = 749046099263619082 #Change this to the id of the actual message
+    message_id = 749054398369497090 #Change this to the id of the actual message
     if payload.message_id == message_id:
         if payload.emoji in reactions:
             user = bot.get_user(payload.user_id)
