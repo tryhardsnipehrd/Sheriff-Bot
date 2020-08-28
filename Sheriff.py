@@ -71,7 +71,7 @@ async def test(ctx):
         await msg.edit(content="Here are the results")
 
     # If the reacted emoji is the X:
-    elif reaction.emoji == "✖️" and user == ctx.message.author:
+    elif reaction.emoji == "✖️" and user != bot.user:
         # We delete the messages
         # await ini.delete()
         await msg.delete()
