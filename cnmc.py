@@ -47,10 +47,10 @@ class cnmc(commands.Cog):
         
         
     @bot.command(name = 'addpoints')
-    async def addpoints(ctx member : Discord.Member):
-    point = int(member.nick[1]) + 1
-    name = member.nick[4:]
-    await edit(nick = f'[{point}] {name}')
+    async def addpoints(ctx, member : Discord.Member):
+        point = int(member.nick[1]) + 1
+        name = member.nick[4:]
+        await edit(nick = f'[{point}] {name}')
         
         
 def setup(bot):
