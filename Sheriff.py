@@ -132,10 +132,10 @@ async def yeet(ctx):
         if i.nick != "EAT THE YEET":
             await i.edit(nick="EAT THE YEET")
     
-@bot.event
-async def on_command_error(ctx, error):
-     if isinstance(error, commands.CommandNotFound):
-         await ctx.send("Command not found. Please check your spelling and try again!")
+#@bot.event
+#async def on_command_error(ctx, error):
+#     if isinstance(error, commands.CommandNotFound):
+#         await ctx.send("Command not found. Please check your spelling and try again!")
 
 
 
