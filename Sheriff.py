@@ -44,6 +44,24 @@ async def help(ctx):
         await ctx.send("This command is in development! Stay tuned!")
         await ctx.send(embed=embed)
 
+        
+
+
+@bot.event()
+async def on_raw_reaction_add(payload):
+
+    roles = [[748992549619892274, 748992549619892274], [748992549619892274, 748992549619892274],
+             [748992549619892274, 748992549619892274], [748992549619892274, 748992549619892274],
+             [748992549619892274, 748992549619892274]]
+
+    reactions = [":heart:", ":yellow_heart:", ":green_heart:", ":blue_heart:", ":purple_heart:"]
+    message_id = 1 #Change this to the id of the actual message
+    if payload.message_id == message_id:
+        if payload.emoji in reactions:
+            user = bot.get_user(payload.user_id)
+            for i in range(5):
+                if payload.emoji == reactions[i]:
+                    await user.add_roles(roles[i][0], roles[i][1])
 
 
 @bot.command()
