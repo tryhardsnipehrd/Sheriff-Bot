@@ -20,13 +20,13 @@ async def on_ready():
     
 @bot.event
 async def on_message(message):
-    
+    await message.delete()
     if message.author == bot.user:
         return
-    if "weed eater" in message.content.lower():
-        await message.delete()
-    elif "WEÉD EATER" in message.content.upper():
-        await message.delete()
+    #if "weed eater" in message.content.lower():
+     #   await message.delete()
+    #elif "WEÉD EATER" in message.content.upper():
+     #   await message.delete()
     
     await bot.process_commands(message)
 @bot.command()
