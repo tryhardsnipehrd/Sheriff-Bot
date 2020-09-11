@@ -24,7 +24,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
     if "weed eater" in message.content.lower():
-        message.delete()
+        await message.delete()
     
     await bot.process_commands(message)
 @bot.command()
