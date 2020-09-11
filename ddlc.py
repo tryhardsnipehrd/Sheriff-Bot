@@ -1,6 +1,27 @@
 import discord
 from discord.ext import commands
 
+rules = ["Rule 1. Respect other members",
+"Rule 2. Respect the mods",
+"Rule 3. Follow Discord’s TOS at: https://discord.com/terms",
+"Rule 4. Don't discriminate against LGBTQIA+",
+"Rule 5. Respect other people's opinions",
+"Rule 6. Try not to swear that much because swearing is mean",
+"Rule 7. No DM advertising",
+"Rule 8. Racism will not be tolerated",
+"Rule 9. Try not to start fights/arguments",
+"Rule 10. NSFW Content will not be tolerated and will result in a warning followed by a ban on second offense unless done in #mod-nsfw. ",
+"Rule 11. Don't spam because it serves no purpose except to annoy people, as you will not gain experience from spamming. Copy pasta is counted as spam.",
+"Rule 12. We don't have any 18+ channels so don't lie about your age",
+"Rule 13. No jokes about terrorist attacks and/or famous deaths",
+"Rule 14. Please use channels for their purpose to avoid mass hysteria",
+"Rule 15. No furry shit unless it's OwO or UwU (only for the memes). -Kabewm",
+"Rule 16. Pictures of Sayori hanging will not be tolerated, and will result in a warning.",
+"Rule 17. Raids will result in a ban, with no second chances.",
+"Rule 19. Don’t steal fan art. If you didn’t draw it, don’t claim it as your own.",
+"Rule 20. You must be at least 13 years old (as per Discord’s TOS Rule 3).",
+"Rule 21. No ghost pinging. If you ping someone, leave the message."]
+
 
 """A simple cog example with simple commands. Showcased here are some check decorators, and the use of events in cogs.
 For a list of inbuilt checks:
@@ -36,9 +57,9 @@ class ddlc(commands.Cog):
         else:
             await ctx.send("is not available in this server")
     
-    @commands.command(name="delete")
+    @commands.command(name="rules")
     async def delete(self, ctx):
-        await ctx.message.delete()
+        await ctx.send(rules)
         
     
 
