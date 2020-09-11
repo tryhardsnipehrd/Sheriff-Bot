@@ -68,34 +68,8 @@ async def on_raw_reaction_add(payload):
 @bot.command()
 async def test(ctx):
     # Store bot message and invoke message in variables:
-    msg, ini = await ctx.send("Would you like to see the results?"), ctx.message
-    
-    # Put your to be reaction added emojis in an iterable:
-    reactions = ('✔️', '✖️')
-    await msg.clear_reactions()
-    
-    # If we want to add multiple emoji's to a message, we have to loop
-    # over each emoji in the reactions tuple, and react with it to the msg:
-    for r in reactions:
-        await msg.add_reaction(r)
-
-    # Wait for a reaction_add event, store the reacted emoji and user
-    reaction, user = await bot.wait_for('reaction_add')
-
-    # If the reacted emoji is the checkmark:
-    if reaction.emoji == "✔️" and user != user.bot:
-        # Clear the reactions from the original message
-        await msg.clear_reactions()
-        # Edit it to display some other content
-        await msg.edit(content="Here are the results")
-
-    # If the reacted emoji is the X:
-    elif reaction.emoji == "✖️" and user != user.bot:
-        # We delete the messages
-        # await ini.delete()
-        await msg.delete()
-        await ctx.send("no")
-
+    await ctx.send("no")
+    await ctx.delete()
 
 #@bot.command()
 #async def hello(ctx):
