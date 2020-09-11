@@ -23,7 +23,7 @@ async def on_message(message):
     
     if message.author == bot.user:
         return
-    if "weed eater" in message.contents.lower():
+    if "weed eater" in message.content.lower():
         message.delete_message()
     
     await bot.process_commands(message)
