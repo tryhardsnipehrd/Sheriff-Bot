@@ -59,7 +59,8 @@ class ddlc(commands.Cog):
     
     @commands.command(name="rules")
     async def delete(self, ctx):
-        await ctx.send(rules)
+        for i in rules:
+            await ctx.send(i)
         
     
 
