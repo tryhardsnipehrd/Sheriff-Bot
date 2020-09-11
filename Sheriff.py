@@ -20,8 +20,8 @@ async def on_ready():
     
 @bot.event
 async def on_message(message):
-    if message.guild.id == 593211246510080000:
-        await message.delete()
+    #if message.guild.id == 593211246510080000:
+      #  await message.delete()
     if message.author == bot.user:
         return
     #if "weed eater" in message.content.lower():
