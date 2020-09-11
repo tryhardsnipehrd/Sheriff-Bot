@@ -59,7 +59,7 @@ class ddlc(commands.Cog):
     
     @commands.command(name="rules")
     async def delete(self, ctx, rule=0):
-        if rule != 0: await ctx.send(rules[rule])
+        if rule != 0: await ctx.send(rules[rule-1])
         else: await ctx.send("\n".join(rules))
         
     
