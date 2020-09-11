@@ -28,14 +28,14 @@ async def on_message(message):
 @bot.command()
 async def help(ctx):
     if ctx.guild.id == 645697605829001217:
-        embed=discord.Embed(title="Help",description="This is the Help commandfor the Tryhrd Town Server! It will help you to use me better! ||not in the wrong way||",color=discord.Color.red())
+        embed=discord.Embed(title="Help",description="This is the Help command for the Tryhrd Town Server! It will help you to use me better! ||not in the wrong way||",color=discord.Color.red())
         embed.add_field(name="Programming",value="[ <@597921286018170900> ]",inline=False)
         embed.add_field(name="Development Supporters",value="myself",inline=False)
         embed.add_field(name="Written In",value="Python, Discord.PY",inline=False)
         await ctx.send("This command is in development! Stay tuned!")
         await ctx.send(embed=embed)
     elif ctx.guild.id == 593211246510080000:
-        embed=discord.Embed(title="Help",description="This is the Help commandfor the Tryhrd Town Server! It will help you to use me better! ||not in the wrong way||",color=discord.Color.red())
+        embed=discord.Embed(title="Help",description="This is the Help command for the DDLC Server! It will help you to use me better! ||not in the wrong way||",color=discord.Color.red())
         embed.add_field(name="Programming",value="[ <@597921286018170900> ]",inline=False)
         embed.add_field(name="Development Supporters",value="myself",inline=False)
         embed.add_field(name="Written In",value="Python, Discord.PY",inline=False)
