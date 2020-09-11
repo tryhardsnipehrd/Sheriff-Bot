@@ -69,7 +69,7 @@ async def on_raw_reaction_add(payload):
 async def test(ctx):
     # Store bot message and invoke message in variables:
     await ctx.send("no")
-    await ctx.delete()
+    await ctx.message.delete()
 
 #@bot.command()
 #async def hello(ctx):
