@@ -25,6 +25,8 @@ async def on_message(message):
         return
     if "weed eater" in message.content.lower():
         await message.delete()
+    elif "WEÉD EATER" in message.content.upper():
+        await message.delete()
     
     await bot.process_commands(message)
 @bot.command()
