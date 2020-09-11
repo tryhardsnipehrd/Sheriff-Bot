@@ -40,12 +40,12 @@ async def help(ctx):
         embed.add_field(name="Development Supporters",value="myself",inline=False)
         embed.add_field(name="Written In",value="Python, Discord.PY",inline=False)
         embed.add_field(name="Misc. Commands",value="hello -- Greet yourself!")
-        embed.add_field(name=" ",value="test -- Make sure the bot is working properly!")
-        embed.add_field(name=" ",value="rules -- Leave blank to see all the rules, and specify a number to see that specific rule")
+        embed.add_field(name="ㅤ",value="test -- Make sure the bot is working properly!")
+        embed.add_field(name="ㅤ",value="rules -- Leave blank to see all the rules, and specify a number to see that specific rule")
         await ctx.send("This command is in development! Stay tuned!")
         await ctx.send(embed=embed)
 
-        
+       
 
 
 @bot.event
