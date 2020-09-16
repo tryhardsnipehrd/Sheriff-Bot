@@ -28,8 +28,8 @@ async def on_message(message):
      #   await message.delete()
     #elif "WEÉD EATER" in message.content.upper():
      #   await message.delete()
-     if message.guild.id == 633872694609182730:
-         await message.delete()
+   if message.guild.id == 633872694609182730:
+       await message.delete()
     
     await bot.process_commands(message)
 @bot.command()
