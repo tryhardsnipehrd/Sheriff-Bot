@@ -28,7 +28,7 @@ async def on_message(message):
      #   await message.delete()
     #elif "WEÉD EATER" in message.content.upper():
      #   await message.delete()
-    if message.channel.id == 633872694609182730:
+    if message.channel.id == 633872694609182730 and message.author.id == 398601531525562369:
         await message.delete()
     
     await bot.process_commands(message)
