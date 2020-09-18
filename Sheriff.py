@@ -78,11 +78,9 @@ async def test(ctx):
     await ctx.send("no")
     await ctx.message.delete()
 
-#@bot.command()
-#async def hello(ctx):
- #   """Greet yourself!"""
-  #  await ctx.trigger_typing()
-   # await ctx.send(f'Hello {ctx.author.mention}!')
+@bot.command()
+async def say(ctx, *, content):
+    await ctx.send(content)
 
 @bot.command()
 async def cogs(ctx):
