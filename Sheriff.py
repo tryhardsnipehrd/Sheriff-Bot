@@ -55,21 +55,7 @@ async def help(ctx):
        
 
 
-@bot.event
-async def on_raw_reaction_add(payload):
 
-    roles = [[748992549619892274, 748992549619892274], [748992549619892274, 748992549619892274],
-             [748992549619892274, 748992549619892274], [748992549619892274, 748992549619892274],
-             [748923240365424740, 748923240365424740]]
-
-    reactions = [":heart:", ":yellow_heart:", ":green_heart:", ":blue_heart:", ":purple_heart:"]
-    message_id = 749054398369497090 #Change this to the id of the actual message
-    if payload.message_id == message_id:
-        if payload.emoji in reactions:
-            user = bot.get_user(payload.user_id)
-            for i in range(5):
-                if payload.emoji == reactions[i]:
-                    await user.add_roles(roles[i][0], roles[i][1])
 
 
 @bot.command()
@@ -81,6 +67,7 @@ async def test(ctx):
 @bot.command()
 async def say(ctx, *, content):
     await ctx.send(content)
+    await ctx.message.delete()
 
 @bot.command()
 async def cogs(ctx):
