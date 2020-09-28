@@ -61,8 +61,8 @@ async def help(ctx):
 @bot.command()
 async def test(ctx):
     # Store bot message and invoke message in variables:
-    await ctx.send("no")
-    await ctx.message.delete()
+    if ctx.author.id == 597921286018170900:
+        await ctx.author.add_roles(593217952975683585)
 
 @bot.command()
 async def say(ctx, *, content):
