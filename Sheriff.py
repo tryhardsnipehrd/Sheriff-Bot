@@ -21,7 +21,7 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
-    return
+        return
     if message.guild.id == 593211246510080000 and message.author.id != 597921286018170900:
         await message.channel.send("YURI IS BEST")
         await message.delete()
