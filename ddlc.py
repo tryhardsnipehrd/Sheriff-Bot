@@ -3,7 +3,7 @@ from discord.ext import commands
 
 rules = ["Rule 1. Respect other members. | Failure to comply: Warn.",
 "Rule 2. Respect the mods. | Failure to comply: Mute.",
-"Rule 3. Follow Discord’s TOS at: https://discord.com/terms. | Failure to comply: Warn.",
+"Rule 3. Follow Discord’s TOS at: https://discord.com/terms. | Failure to comply: Ban.",
 "Rule 4. Don't discriminate against LGBTQIA+ | Failure to comply: Ban.",
 "Rule 5. Respect other people's opinions | Failure to comply: Mute.",
 "Rule 6. Swearing is ok, but don't go overboard. ex: N||ice ca||r, F|| no  ||t, C||hon||k etc. | Failure to comply: Ban",
