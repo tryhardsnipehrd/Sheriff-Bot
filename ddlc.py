@@ -58,7 +58,7 @@ class ddlc(commands.Cog):
         else:
             await ctx.send("is not available in this server")
     
-    @commands.command(name="rules", alias="rule")
+    @commands.command(name="rules", aliases=["rule"])
     async def delete(self, ctx, rule=0):
         if rule != 0: await ctx.send(rules[rule-1])
         else: await ctx.send("\n".join(rules))
