@@ -1,26 +1,27 @@
 import discord
 from discord.ext import commands
 
-rules = ["Rule 1. Respect other members",
-"Rule 2. Respect the mods",
-"Rule 3. Follow Discord’s TOS at: https://discord.com/terms",
-"Rule 4. Don't discriminate against LGBTQIA+",
-"Rule 5. Respect other people's opinions",
-"Rule 6. Try not to swear that much because swearing is mean",
-"Rule 7. No DM advertising",
-"Rule 8. Racism will not be tolerated",
-"Rule 9. Try not to start fights/arguments",
-"Rule 10. NSFW Content will not be tolerated and will result in a warning followed by a ban on second offense unless done in #mod-nsfw. ",
-"Rule 11. Don't spam because it serves no purpose except to annoy people, as you will not gain experience from spamming. Copy pasta is counted as spam.",
-"Rule 12. We don't have any 18+ channels so don't lie about your age",
-"Rule 13. No jokes about terrorist attacks and/or famous deaths",
-"Rule 14. Please use channels for their purpose to avoid mass hysteria",
-"Rule 15. No furry shit unless it's OwO or UwU (only for the memes). -Kabewm",
-"Rule 16. Pictures of Sayori hanging will not be tolerated, and will result in a warning.",
-"Rule 17. Raids will result in a ban, with no second chances.",
-"Rule 19. Don’t steal fan art. If you didn’t draw it, don’t claim it as your own.",
-"Rule 20. You must be at least 13 years old (as per Discord’s TOS Rule 3).",
-"Rule 21. No ghost pinging. If you ping someone, leave the message."]
+rules = ["Rule 1. Respect other members. || Failure to comply: Warn.",
+"Rule 2. Respect the mods. || Failure to comply: Mute.",
+"Rule 3. Follow Discord’s TOS at: https://discord.com/terms. || Failure to comply: Warn.",
+"Rule 4. Don't discriminate against LGBTQIA+ || Failure to comply: Ban.",
+"Rule 5. Respect other people's opinions || Failure to comply: Mute.",
+"Rule 6. Swearing is ok, but don't go overboard. ex: N||ice ca||r, F|| no  ||t, C||hon||k etc. || Failure to comply: Ban",
+"Rule 7. No DM advertising. || Failure to comply: Warn.",
+"Rule 8. Racism will not be tolerated. || Failure to comply: Ban.",
+"Rule 9. Don't start fights/arguments. || Failure to comply: Mute.",
+"Rule 10. NSFW Content will not be tolerated anywhere in this server and it never will. || Failure to comply: Ban.",
+"Rule 11. Don't spam because it serves no purpose except to annoy people, as you will not gain experience from spamming. Copy pasta is counted as spam. || Failure to comply: Mute.",
+"Rule 12. We don't have any 18+ channels so don't lie about your age. || Failure to comply: Warn.",
+"Rule 13. No jokes about terrorist attacks and/or famous deaths. || Failure to comply: Warn.",
+"Rule 14. Please use channels for their purpose to avoid mass hysteria. || Failure to comply: Warn.",
+"Rule 15. No furry except OwO and UwU as it breaks rule 10. || Failure to comply: Ban",
+"Rule 16. Pictures of Sayori hanging will not be tolerated. || Failure to comply: Warning",
+"Rule 17. Don't raid ex: Spam, Mass ping, etc. || Failure to comply: Ban.",
+"Rule 18. Don’t steal fan art. If you didn’t draw it, don’t claim it as your own. || Failure to comply: Warn + Mute.",
+"Rule 19. You must be at least 13 years old (as per Discord’s TOS Rule 3). || Failure to comply: Ban.",
+"Rule 21. No ghost pinging. If you ping someone, leave the message. || Failure to comply: Mute + Warn.", 
+"Rule 22. No impersonating others with bad intention || Failure to comply: Ban."]
 
 
 """A simple cog example with simple commands. Showcased here are some check decorators, and the use of events in cogs.
