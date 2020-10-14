@@ -69,7 +69,7 @@ async def test(ctx):
         await ctx.author.add_roles(ctx.guild.get_role(593217952975683585))
 
 @bot.command()
-async def say(ctx, *, content):
+async def talk(ctx, *, content):
     await ctx.send(content)
     await ctx.message.delete()
 
