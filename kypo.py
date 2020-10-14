@@ -2,16 +2,7 @@ import discord
 from discord.ext import commands
 
 
-"""A simple cog example with simple commands. Showcased here are some check decorators, and the use of events in cogs.
-For a list of inbuilt checks:
-http://dischttp://discordpy.readthedocs.io/en/rewrite/ext/commands/api.html#checksordpy.readthedocs.io/en/rewrite/ext/commands/api.html#checks
-You could also create your own custom checks. Check out:
-https://github.com/Rapptz/discord.py/blob/master/discord/ext/commands/core.py#L689
-For a list of events:
-http://discordpy.readthedocs.io/en/rewrite/api.html#event-reference
-http://discordpy.readthedocs.io/en/rewrite/ext/commands/api.html#event-reference
-"""
-
+admin_helper = (597921286018170900, 292877604053188618)
 
 class kypo(commands.Cog):
     """SimpleCog"""
@@ -29,6 +20,12 @@ class kypo(commands.Cog):
     @commands.command(name="kypo")
     async def main(self, ctx):
         await ctx.send("I am online and active")
+        
+    @commands.command(name="mail")
+    async def mail(self, ctx, *, content):
+        for i in admin_helper:
+            user = client.get_user(i)
+            await user.send(content)
     
 
     
