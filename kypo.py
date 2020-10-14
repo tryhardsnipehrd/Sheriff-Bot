@@ -25,7 +25,7 @@ class kypo(commands.Cog):
     async def mail(self, ctx, *, content):
         if ctx.guild.id == 765695776697352202:
             for i in admin_helper:
-                user = client.get_user(i)
+                user = discord.get_user(i)
                 await user.send(content)
     
 
