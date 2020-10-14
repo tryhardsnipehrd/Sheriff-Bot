@@ -17,6 +17,7 @@ async def on_ready():
     bot.load_extension("ddlc")
     bot.load_extension("main")
     bot.load_extension("cnmc")
+    bot.load_extension("kypo")
     
 @bot.event
 async def on_message(message):
