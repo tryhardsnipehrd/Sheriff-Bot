@@ -54,6 +54,16 @@ async def help(ctx):
         embed.add_field(name="ㅤ",value="rules -- Leave blank to see all the rules, and specify a number to see that specific rule")
         await ctx.send("This command is in development! Stay tuned!")
         await ctx.send(embed=embed)
+    elif ctx.guild.id == 765695776697352202:
+        embed=discord.Embed(title="Help",description="This is the Help command for the DDLC Server! It will help you to use me better! ||not in the wrong way||",color=discord.Color.red())
+        embed.add_field(name="Programming",value="[ <@597921286018170900> ]",inline=False)
+        embed.add_field(name="Development Supporters",value="myself",inline=False)
+        embed.add_field(name="Written In",value="Python, Discord.PY",inline=False)
+        embed.add_field(name="Misc. Commands",value="hello -- Greet yourself!")
+        embed.add_field(name="ㅤ",value="mods -- Send a message to the mods. ***Only use if necessary!!!***")
+        embed.add_field(name="ㅤ",value="rules -- Leave blank to see all the rules, and specify a number to see that specific rule")
+        await ctx.send("This command is in development! Stay tuned!")
+        await ctx.send(embed=embed)
 
        
 
