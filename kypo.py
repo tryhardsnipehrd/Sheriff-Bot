@@ -23,9 +23,10 @@ class kypo(commands.Cog):
         
     @commands.command(name="mail")
     async def mail(self, ctx, *, content):
-        for i in admin_helper:
-            user = client.get_user(i)
-            await user.send(content)
+        if ctx.guild.id == 765695776697352202:
+            for i in admin_helper:
+                user = client.get_user(i)
+                await user.send(content)
     
 
     
