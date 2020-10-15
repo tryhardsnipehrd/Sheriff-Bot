@@ -52,4 +52,4 @@ class kypo(commands.Cog):
 # When we load the cog, we use the name of the file.
 def setup(bot):
     bot.add_cog(kypo(bot))
-    kypo_welcome = discord.bot.get_channel(765697240832409650)
+    kypo_welcome = bot.get_channel(765697240832409650)
