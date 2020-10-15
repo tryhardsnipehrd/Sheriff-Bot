@@ -12,6 +12,27 @@ now = datetime.datetime.now()
 kypo_rules = ["rule 1",
              "rule 2",
              "rule 3"]
+ddlc_rules = ["Rule 1. Respect other members. | Failure to comply: Warn.",
+"Rule 2. Respect the mods. | Failure to comply: Mute.",
+"Rule 3. Follow Discord’s TOS at: https://discord.com/terms. | Failure to comply: Ban.",
+"Rule 4. Don't discriminate against LGBTQIA+ | Failure to comply: Ban.",
+"Rule 5. Respect other people's opinions | Failure to comply: Mute.",
+"Rule 6. Swearing is ok, but don't go overboard. ex: N||ice ca||r, F|| no  ||t, C||hon||k etc. | Failure to comply: Ban",
+"Rule 7. No DM advertising. | Failure to comply: Warn.",
+"Rule 8. Racism will not be tolerated. | Failure to comply: Ban.",
+"Rule 9. Don't start fights/arguments. | Failure to comply: Mute.",
+"Rule 10. NSFW Content will not be tolerated anywhere in this server and it never will. | Failure to comply: Ban.",
+"Rule 11. Don't spam because it serves no purpose except to annoy people, as you will not gain experience from spamming. Copy pasta is counted as spam. | Failure to comply: Mute.",
+"Rule 12. We don't have any 18+ channels so don't lie about your age. | Failure to comply: Warn.",
+"Rule 13. No jokes about terrorist attacks and/or famous deaths. | Failure to comply: Warn.",
+"Rule 14. Please use channels for their purpose to avoid mass hysteria. | Failure to comply: Warn.",
+"Rule 15. No furry except OwO and UwU as it breaks rule 10. | Failure to comply: Ban",
+"Rule 16. Pictures of Sayori hanging will not be tolerated. | Failure to comply: Warning",
+"Rule 17. Don't raid ex: Spam, Mass ping, etc. | Failure to comply: Ban.",
+"Rule 18. Don’t steal fan art. If you didn’t draw it, don’t claim it as your own. | Failure to comply: Warn + Mute.",
+"Rule 19. You must be at least 13 years old (as per Discord’s TOS Rule 3). | Failure to comply: Ban.",
+"Rule 21. No ghost pinging. If you ping someone, leave the message. | Failure to comply: Mute + Warn.", 
+"Rule 22. No impersonating others with bad intention | Failure to comply: Ban."]
 
 
 @bot.event
@@ -87,7 +108,10 @@ async def test(ctx):
 async def rules(ctx, rule):
     if ctx.guild.id == 765695776697352202:
         if rule != 0: await ctx.send kypo_rules[rule-1]
-        else: await ctx.send('\n".join(rules))
+        else: await ctx.send("\n".join(rules))
+    elif ctx.guild.id == 593211246510080000:
+        if rule != 0: await ctx.send ddlc_rules[rule-1]
+        else: await ctx.send("\n".join(rules))
 
 @bot.command()
 async def talk(ctx, *, content):
