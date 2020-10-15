@@ -45,7 +45,7 @@ async def on_ready():
     bot.load_extension("main")
     bot.load_extension("cnmc")
     bot.load_extension("kypo")
-    await bot.change_presence(activity=discord.Game(name="Use $help to get help!"))
+    await bot.change_presence(activity=discord.Game(name="Ready to take over | $help"))
 
     
 @bot.event
