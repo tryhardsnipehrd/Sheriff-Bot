@@ -26,7 +26,7 @@ class kypo(commands.Cog):
         if ctx.guild.id == 765695776697352202:
             for i in admin_helper:
                 user = self.bot.get_user(i)
-                await user.send(f"{ctx.author} sent a message in {ctx.channel}: {content}")
+                await user.send(f"{ctx.author}({ctx.author.id}) sent a message in {ctx.channel}: {content}")
     
 
     
