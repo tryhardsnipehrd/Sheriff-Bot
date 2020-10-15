@@ -107,10 +107,10 @@ async def test(ctx):
 @bot.command(aliases=["rule"])
 async def rules(ctx, rule):
     if ctx.guild.id == 765695776697352202:
-        if rule != 0: await ctx.send kypo_rules[rule-1]
+        if rule != 0: await ctx.send(kypo_rules[rule-1])
         else: await ctx.send("\n".join(rules))
     elif ctx.guild.id == 593211246510080000:
-        if rule != 0: await ctx.send ddlc_rules[rule-1]
+        if rule != 0: await ctx.send(ddlc_rules[rule-1])
         else: await ctx.send("\n".join(rules))
 
 @bot.command()
