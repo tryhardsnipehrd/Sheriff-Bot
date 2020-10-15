@@ -27,6 +27,12 @@ class kypo(commands.Cog):
             for i in admin_helper:
                 user = self.bot.get_user(i)
                 await user.send(f"{ctx.author}({ctx.author.id}) sent a message in {ctx.channel}: {content}")
+                
+    @commands.Cog.listener()
+    async def on_member_join(self, guild, user):
+        if guild.id == 765695776697352202:
+            kypo_welcome.send(f"Welcome to the Pandora {user.mention}!")
+            
     
 
     
@@ -46,3 +52,4 @@ class kypo(commands.Cog):
 # When we load the cog, we use the name of the file.
 def setup(bot):
     bot.add_cog(kypo(bot))
+    kypo_welcome = discord.get_channel(765697240832409650)
