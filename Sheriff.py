@@ -63,6 +63,9 @@ async def on_message(message):
      #   await message.delete()
     if message.channel.id == 633872694609182730 and message.author == 398601531525562369:
         await message.delete()
+        
+    if bot.user.mention in message.contents:
+        message.channel.send("WHO DARE MENTION ME")
     
     await bot.process_commands(message)
 @bot.command()
