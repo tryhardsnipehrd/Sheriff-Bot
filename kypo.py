@@ -29,7 +29,7 @@ class kypo(commands.Cog):
                 await user.send(f"{ctx.author}({ctx.author.id}) sent a message in {ctx.channel}: {content}")
                 
     @commands.command(name="mute")
-    @commands.has_permissions(Administrator=True)
+    @commands.has_permissions(administrator=True)
     async def mute(self, user: discord.user):
         
         await ctx.send(f"{user} has been muted")
