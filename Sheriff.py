@@ -13,7 +13,7 @@ kypo_rules = ["Rule 1: No racial slurs. Period.",
              "Rule 2: No spamming. Copy pasta is counted as spamming, and will be dealt with accordingly.",
              "Rule 3: No excessive noise in any of the VC channelsl. EG: Ear rape, Yelling, etc...",
              "Rule 4: Do not spam ping anyone!!! This includes spamming the `$mail` command.",
-             "Rule 5: Self Promotion only goes in the dedicated channels. #community-content #shout-yourself-out"]
+             "Rule 5: Self Promotion only goes in the dedicated channels. <#765770372523491329> #shout-yourself-out"]
 ddlc_rules = ["Rule 1. Respect other members. | Failure to comply: Warn.",
 "Rule 2. Respect the mods. | Failure to comply: Mute.",
 "Rule 3. Follow Discord’s TOS at: https://discord.com/terms. | Failure to comply: Ban.",
