@@ -28,10 +28,11 @@ class kypo(commands.Cog):
                 user = self.bot.get_user(i)
                 await user.send(f"{ctx.author}({ctx.author.id}) sent a message in {ctx.channel}: {content}")
                 
-    @commands.Cog.listener()
-    async def on_member_join(self, guild, user):
-        if guild.id == 765695776697352202:
-            kypo_welcome.send(f"Welcome to the Pandora {user.mention}!")
+    @commands.command(name="mute")
+    async def mute(self, user: discord.user):
+        
+        await ctx.send(f"{user} has been muted")
+        await user.edit(roles=["Muted"])
             
     
 
