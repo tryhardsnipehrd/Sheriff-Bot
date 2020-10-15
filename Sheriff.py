@@ -105,7 +105,7 @@ async def test(ctx):
         await ctx.author.add_roles(ctx.guild.get_role(593217952975683585))
         
 @bot.command(aliases=["rule"])
-async def rules(ctx, rule):
+async def rules(ctx, rule=0):
     if ctx.guild.id == 765695776697352202:
         if rule != 0: await ctx.send(kypo_rules[rule-1])
         else: await ctx.send("\n".join(rules))
