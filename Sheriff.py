@@ -104,7 +104,7 @@ async def help(ctx):
 @bot.command()
 async def test(ctx):
     # Store bot message and invoke message in variables:
-    await ctx.send(bot.mention)
+    await ctx.send(bot.user.mention)
         
 @bot.command(aliases=["rule"])
 async def rules(ctx, rule=0):
