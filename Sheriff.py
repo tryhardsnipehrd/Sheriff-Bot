@@ -9,6 +9,10 @@ bot = commands.Bot(command_prefix='$', help_command = None)
 
 now = datetime.datetime.now()
 
+kypo_rules = ["rule 1",
+             "rule 2",
+             "rule 3"]
+
 
 @bot.event
 async def on_ready():
@@ -78,6 +82,12 @@ async def test(ctx):
     if ctx.author.id == 597921286018170900:
         await ctx.send("maybe")
         await ctx.author.add_roles(ctx.guild.get_role(593217952975683585))
+        
+@bot.command(aliases=["rule]")
+async def rules(ctx, rule):
+    if ctx.guild.id == 765695776697352202:
+        if rule != 0: await ctx.send kypo_rules[rule-1]
+        else: await ctx.send('\n".join(rules))
 
 @bot.command()
 async def talk(ctx, *, content):
