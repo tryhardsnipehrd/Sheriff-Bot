@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 
-admin_helper = (597921286018170900, 292877604053188618)
+admin_helper = (597921286018170900, 292877604053188618, 654822384569942017)
 
 class kypo(commands.Cog):
     """SimpleCog"""
