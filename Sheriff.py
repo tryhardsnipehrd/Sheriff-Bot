@@ -6,7 +6,7 @@ from discord.ext import commands
 import datetime
 
 bot = commands.Bot(command_prefix='$', help_command = None)
-bot.change_presence("Use $help to get help!")
+await bot.change_presence(activity=discord.Game(name="Use $help to get help!"))
 
 now = datetime.datetime.now()
 
