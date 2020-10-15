@@ -6,7 +6,6 @@ from discord.ext import commands
 import datetime
 
 bot = commands.Bot(command_prefix='$', help_command = None)
-await bot.change_presence(activity=discord.Game(name="Use $help to get help!"))
 
 now = datetime.datetime.now()
 
@@ -46,6 +45,8 @@ async def on_ready():
     bot.load_extension("main")
     bot.load_extension("cnmc")
     bot.load_extension("kypo")
+    await bot.change_presence(activity=discord.Game(name="Use $help to get help!"))
+
     
 @bot.event
 async def on_message(message):
