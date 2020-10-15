@@ -108,10 +108,10 @@ async def test(ctx):
 async def rules(ctx, rule=0):
     if ctx.guild.id == 765695776697352202:
         if rule != 0: await ctx.send(kypo_rules[rule-1])
-        else: await ctx.send("\n".join(rules))
+        else: await ctx.send("\n".join(kypo_rules))
     elif ctx.guild.id == 593211246510080000:
         if rule != 0: await ctx.send(ddlc_rules[rule-1])
-        else: await ctx.send("\n".join(rules))
+        else: await ctx.send("\n".join(ddlc_rules))
 
 @bot.command()
 async def talk(ctx, *, content):
