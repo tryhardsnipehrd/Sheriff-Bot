@@ -30,7 +30,7 @@ class kypo(commands.Cog):
                 
     @commands.command(name="mute")
     @commands.has_permissions(administrator=True)
-    async def mute(self, user: discord.user):
+    async def mute(self, ctx, user: discord.user):
         
         await ctx.send(f"{user} has been muted")
         await user.edit(roles=["Muted"])
