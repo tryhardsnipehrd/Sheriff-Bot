@@ -34,7 +34,7 @@ class kypo(commands.Cog):
     async def mute(self, ctx, user:discord.Member):
         muted = discord.utils.get(ctx.guild.roles, name="Muted")
         await ctx.send(f"{user} has been muted")
-        await user.add_role(muted)
+        await user.add_roles(muted)
             
     
 
