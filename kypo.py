@@ -33,7 +33,7 @@ class kypo(commands.Cog):
     async def mute(self, ctx, user: discord.user):
         
         await ctx.send(f"{user} has been muted")
-        await user.edit(roles=["Muted"])
+        await user.add_role(766411875402514442)
             
     
 
