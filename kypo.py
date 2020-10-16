@@ -4,6 +4,7 @@ from discord.ext import commands
 
 admin_helper = (597921286018170900, 292877604053188618, 654822384569942017)
 
+
 class kypo(commands.Cog):
     """SimpleCog"""
 
@@ -31,9 +32,9 @@ class kypo(commands.Cog):
     @commands.command(name="mute")
     @commands.has_permissions(administrator=True)
     async def mute(self, ctx, user:discord.Member):
-        
+        muted = discord.utils.get(ctx.guild.roles, name="Muted")
         await ctx.send(f"{user} has been muted")
-        await user.add_role(766411875402514442)
+        await user.add_role(muted)
             
     
 
