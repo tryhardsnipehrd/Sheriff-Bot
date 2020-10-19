@@ -118,6 +118,11 @@ async def rules(ctx, rule=0):
     elif ctx.guild.id == 593211246510080000:
         if rule != 0: await ctx.send(ddlc_rules[rule-1])
         else: await ctx.send("\n".join(ddlc_rules))
+          
+@bot.command()
+@command.has_permissions(administrator=True)
+async def kick(ctx):
+    await ctx.send("test")
 
 @bot.command()
 async def talk(ctx, *, content):
