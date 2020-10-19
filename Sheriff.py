@@ -125,6 +125,11 @@ async def kick(ctx, user:discord.Member):
     await user.kick()
     await ctx.send(f"{user} has been kicked")
     
+@kick.error
+async def kick_error(ctx, error):
+    if isinstance(error, commands.MissingRequiredArgument):
+        await ctx.send("Please provide a user to kick. e.g. $kick @user")
+    
     
 @bot.command()
 @commands.has_permissions(ban_members=True)
@@ -135,11 +140,8 @@ async def ban(ctx, user:discord.Member):
 @ban.error
 async def ban_error(ctx, error):
     print("Caught an error on ban")
-    if isinstance(error, commands.MissingPermissions):
-        await ctx.send("You do not have the required permissions to ban people")
-    
-    elif isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send(f"Please provide a user to ban. e.g. //ban @user")
+    if isinstance(error, commands.MissingRequiredArgument):
+        await ctx.send(f"Please provide a user to ban. e.g. $ban @user")
     
     
 
