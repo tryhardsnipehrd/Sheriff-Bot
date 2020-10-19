@@ -134,6 +134,7 @@ async def ban(ctx, user:discord.Member):
     
 @ban.error
 async def ban_error(ctx, error):
+    print("Caught an error on ban")
     if isinstance(error, commands.MissingRequiredPermission):
         await ctx.send("You do not have the required permissions to ban people")
     
