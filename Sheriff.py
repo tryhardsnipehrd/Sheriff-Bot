@@ -121,8 +121,10 @@ async def rules(ctx, rule=0):
           
 @bot.command()
 @commands.has_permissions(kick_members=True)
-async def kick(ctx):
-    await ctx.send("test")
+async def kick(self, ctx, user:discord.Member):
+    await user.kick()
+    await ctx.send(f"{user} has been kicked")
+    
 
 @bot.command()
 async def talk(ctx, *, content):
