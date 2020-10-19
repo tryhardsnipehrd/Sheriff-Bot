@@ -120,7 +120,7 @@ async def rules(ctx, rule=0):
         else: await ctx.send("\n".join(ddlc_rules))
           
 @bot.command()
-@commands.has_permissions(administrator=True)
+@commands.has_permissions(kick_members=True)
 async def kick(ctx):
     await ctx.send("test")
 
