@@ -132,6 +132,15 @@ async def ban(ctx, user:discord.Member):
     await user.ban()
     await ctx.send(f"{user} has been banned")
     
+@ban.error
+async def ban_error(ctx, error):
+    if isinstance(error, commands.MissingRequiredPermission):
+        await ctx.send("You do not have the required permissions to ban people")
+    
+    elif isinstance(error, commands.MissingRequiredArgument):
+        await ctx.send(f"Please provide a user to ban. e.g. //ban @user")
+    
+    
 
 @bot.command()
 async def talk(ctx, *, content):
