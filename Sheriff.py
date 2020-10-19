@@ -121,14 +121,14 @@ async def rules(ctx, rule=0):
           
 @bot.command()
 @commands.has_permissions(kick_members=True)
-async def kick(self, ctx, user:discord.Member):
+async def kick(ctx, user:discord.Member):
     await user.kick()
     await ctx.send(f"{user} has been kicked")
     
     
 @bot.command()
 @commands.has_permissions(ban_members=True)
-async def ban(self, ctx, user:discord.Member):
+async def ban(ctx, user:discord.Member):
     await user.ban()
     await ctx.send(f"{user} has been banned")
     
