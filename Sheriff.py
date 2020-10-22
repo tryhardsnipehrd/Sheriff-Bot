@@ -47,7 +47,7 @@ async def on_ready():
     bot.load_extension("cnmc")
     bot.load_extension("kypo")
     await bot.change_presence(activity=discord.Game(name="Ready to take over | $help"))
-    kypo_logs = bot.get_channel(765924824731746354)
+    
 
     
 @bot.event
@@ -148,6 +148,7 @@ async def ban_error(ctx, error):
 
 @bot.command()
 async def talk(ctx, *, content):
+    kypo_logs = bot.get_channel(765924824731746354)
     await ctx.send(content)
     await kypo_logs.send(ctx.author)
     await ctx.message.delete()
