@@ -150,7 +150,7 @@ async def ban_error(ctx, error):
 async def talk(ctx, *, content):
     kypo_logs = bot.get_channel(765924824731746354)
     await ctx.send(content)
-    await kypo_logs.send(ctx.author)
+    print(ctx.author)
     await ctx.message.delete()
     
 
