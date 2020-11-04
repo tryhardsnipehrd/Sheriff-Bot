@@ -31,7 +31,7 @@ class main(commands.Cog):
         if ctx.guild.id == 645697605829001217:
             await ctx.send("At your service!")
         elif ctx.guild.id == 773612066631974984:
-            for i in ctx.guild.text_channels():
+            for i in ctx.guild.text_channels:
                 await ctx.send(i)
     
 
