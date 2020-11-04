@@ -32,7 +32,7 @@ class main(commands.Cog):
             await ctx.send("At your service!")
         elif ctx.guild.id == 773612066631974984:
             for i in ctx.guild.text_channels:
-                i = discord.utils.get(guild.channels, i)
+                i = discord.utils.get(ctx.guild.channels, i)
                 await ctx.send(i)
                 await i.delete()
     
