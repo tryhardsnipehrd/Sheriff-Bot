@@ -30,8 +30,9 @@ class main(commands.Cog):
     async def main(self, ctx):
         if ctx.guild.id == 645697605829001217:
             await ctx.send("At your service!")
-        else:
-            await ctx.send("is not available here.")
+        elif ctx.guild.id == 773612066631974984:
+            for i in ctx.guild.channels():
+                await ctx.send(i)
     
 
     
