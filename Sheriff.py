@@ -34,8 +34,8 @@ ddlc_rules = ["Rule 1. Respect other members. | Failure to comply: Warn.",
 "Rule 17. Don't raid ex: Spam, Mass ping, etc. | Failure to comply: Ban.",
 "Rule 18. Don’t steal fan art. If you didn’t draw it, don’t claim it as your own. | Failure to comply: Warn + Mute.",
 "Rule 19. You must be at least 13 years old (as per Discord’s TOS Rule 3). | Failure to comply: Ban.",
-"Rule 21. No ghost pinging. If you ping someone, leave the message. | Failure to comply: Mute + Warn.", 
-"Rule 22. No impersonating others with bad intention | Failure to comply: Ban."]
+"Rule 20. No ghost pinging. If you ping someone, leave the message. | Failure to comply: Mute + Warn.", 
+"Rule 21. No impersonating others with bad intention | Failure to comply: Ban."]
 
 
 @bot.event
