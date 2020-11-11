@@ -66,7 +66,7 @@ async def on_message(message):
     if message.channel.id == 633872694609182730 and message.author == 398601531525562369:
         await message.delete()
         
-    if bot.user in message.mentions and message.author != bot.owner:
+    if bot.user in message.mentions:
         await message.channel.send("WHO DARE MENTION ME")
     
     await bot.process_commands(message)
@@ -112,8 +112,10 @@ async def test(ctx):
     await ctx.send(bot.user.mention)
     
 @bot.command()
-async def bday(ctx, mention):
-    if ctx.author.mention == mention:
+async def bday(ctx, mention="no"):
+    if mention == "no":
+        await ctx.send("Please tell me who to wish a happy birthday to!")
+    elif ctx.author.mention == mention:
         await ctx.send("You can't wish yourself a happy birthday!")
     else:
         await ctx.send(f"Happy Happy Birthday, from this bot to you. I hope you have a great day, because I like you! Happy birthday, {mention}")
