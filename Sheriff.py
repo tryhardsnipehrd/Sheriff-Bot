@@ -112,8 +112,8 @@ async def test(ctx):
     await ctx.send(bot.user.mention)
     
 @bot.command()
-async def bday(ctx):
-    await ctx.send("Happy Happy Birthday, from this bot to you. I hope you have a great day, because I like you!")
+async def bday(ctx, mention):
+    await ctx.send(f"Happy Happy Birthday, from this bot to you. I hope you have a great day, because I like you! Happy birthday, {mention}")
         
 @bot.command(aliases=["rule"])
 async def rules(ctx, rule=0):
