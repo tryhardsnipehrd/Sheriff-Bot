@@ -110,6 +110,10 @@ async def help(ctx):
 async def test(ctx):
     # Store bot message and invoke message in variables:
     await ctx.send(bot.user.mention)
+    
+@bot.command()
+async def bday(ctx):
+    await ctx.send("Happy Happy Birthday, from this bot to you. I hope you have a great day, because I like you!")
         
 @bot.command(aliases=["rule"])
 async def rules(ctx, rule=0):
