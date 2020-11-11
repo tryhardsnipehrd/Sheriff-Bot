@@ -188,11 +188,8 @@ async def invite(ctx):
     
 @bot.command()
 @commands.is_owner()
-async def yeet(ctx):
-    await ctx.send("yeet")
-    for i in ctx.guild.members:
-        if i.nick != "EAT THE YEET":
-            await i.edit(nick="EAT THE YEET")
+async def status(ctx, *, status):
+    await bot.change_presence(activity=discord.Game(name=status))
     
 #@bot.event
 #async def on_command_error(ctx, error):
