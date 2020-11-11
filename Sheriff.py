@@ -6,6 +6,7 @@ from discord.ext import commands
 import datetime
 
 bot = commands.Bot(command_prefix='$', help_command = None)
+statuses = ["Ready to take over | $help","Going to kill SenBot | $help","Waiting to get updated... | $help"]
 
 now = datetime.datetime.now()
 
@@ -46,7 +47,7 @@ async def on_ready():
     bot.load_extension("main")
     bot.load_extension("cnmc")
     bot.load_extension("kypo")
-    await bot.change_presence(activity=discord.Game(name="Ready to take over | $help"))
+    await bot.change_presence(activity=discord.Game(name=statuses.random()))
     
 
     
