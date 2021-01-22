@@ -6,6 +6,9 @@ from discord.ext import commands
 import datetime
 
 bot = commands.Bot(command_prefix='$', help_command = None)
+
+dokiLockdown = False
+
 statuses = ["Ready to take over | $help","Going to kill SenBot | $help","Waiting to get updated... | $help"]
 
 now = datetime.datetime.now()
@@ -55,9 +58,8 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
-    #if message.guild.id == 593211246510080000 and message.author.id != 597921286018170900:
-     #   await message.channel.send("YURI IS BEST")
-      #  await message.delete()
+    if message.guild.id == 593211246510080000 and message.author.id != 597921286018170900 and dokiLockdown:
+        await message.delete()
         
 
     #if "weed eater" in message.content.lower():
@@ -147,7 +149,6 @@ async def ban_error(ctx, error):
 async def talk(ctx, *, content):
     kypo_logs = bot.get_channel(765924824731746354)
     await ctx.send(content)
-    print(ctx.author)
     await ctx.message.delete()
     
 
@@ -177,6 +178,11 @@ async def invite(ctx):
 @commands.is_owner()
 async def status(ctx, *, status):
     await bot.change_presence(activity=discord.Game(name=status))
+
+@bot.command()
+@commands.is_owner()
+async def lockdown(ctx):
+    lockDown = !lockDown
     
 #@bot.event
 #async def on_command_error(ctx, error):
