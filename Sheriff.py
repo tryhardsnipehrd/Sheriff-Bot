@@ -183,6 +183,7 @@ async def status(ctx, *, status):
 @bot.command()
 @commands.is_owner()
 async def lockdown(ctx):
+    global dokiLockdown
     if dokiLockdown:
         dokiLockdown = False
     elif not dokiLockdown:
