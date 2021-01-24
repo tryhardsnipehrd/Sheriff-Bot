@@ -59,7 +59,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
-    if message.guild.id == 593211246510080000 and message.author.id != 597921286018170900 and dokiLockdown:
+    if message.guild.id == 593211246510080000 and 593217952975683585 not in message.author.roles and dokiLockdown:
         await message.delete()
         
 
