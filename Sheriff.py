@@ -6,7 +6,7 @@ from discord.ext import commands
 import datetime
 
 bot = commands.Bot(command_prefix='$', help_command = None)
-
+global dokiLockdown = False
 
 
 statuses = ["Ready to take over | $help","Going to kill SenBot | $help","Waiting to get updated... | $help"]
@@ -44,7 +44,6 @@ ddlc_rules = ["Rule 1. Respect other members. | Failure to comply: Warn.",
 
 @bot.event
 async def on_ready():
-    dokiLockdown = False
     print('We have logged in as {0.user}'.format(bot))
     print(now)
     bot.load_extension("ddlc")
