@@ -6,7 +6,8 @@ from discord.ext import commands
 import datetime
 
 bot = commands.Bot(command_prefix='$', help_command = None)
-global dokiLockdown = False
+global dokiLockdown 
+dokiLockdown = False
 
 
 statuses = ["Ready to take over | $help","Going to kill SenBot | $help","Waiting to get updated... | $help"]
