@@ -100,7 +100,7 @@ async def help(ctx):
 @bot.command()
 async def test(ctx):
     # Store bot message and invoke message in variables:
-    await ctx.send(bot.user.mention)
+    await ctx.send(ctx.author.roles)
     
 @bot.command()
 async def bday(ctx, mention="no"):
