@@ -183,14 +183,14 @@ async def status(ctx, *, status):
 @bot.command()
 @commands.is_owner()
 async def lockdown(ctx):
-    ctx.send("testing")
+    await ctx.send("testing")
     global dokiLockdown
     if dokiLockdown:
         dokiLockdown = False
-        ctx.send("Lockdown Cancelled!")
+        await ctx.send("Lockdown Cancelled!")
     elif not dokiLockdown:
         dokiLockdown = True
-        ctx.send("Lockdown Initiated!")
+        await ctx.send("Lockdown Initiated!")
     
 #@bot.event
 #async def on_command_error(ctx, error):
