@@ -78,13 +78,13 @@ async def test(ctx):
     await ctx.send(ctx.author.roles)
     
 @bot.command()
-async def bday(ctx, mention="no"):
-    if mention == "no":
+async def bday(ctx, mention=NULL):
+    if mention == NULL:
         await ctx.send("Please tell me who to wish a happy birthday to!")
     elif ctx.author.mention == mention:
         await ctx.send("You can't wish yourself a happy birthday!")
     else:
-        await ctx.send(f"Happy Happy Birthday, from this bot to you. I hope you have a great day, because I like you! Happy birthday, {mention}")
+        await ctx.send(f"Happy Happy Birthday, from this bot to you. I hope you have a great day, because I like you!\nHappy birthday, {mention}")
         
 @bot.command(aliases=["rule"])
 async def rules(ctx, rule=0):
@@ -123,7 +123,6 @@ async def ban_error(ctx, error):
 
 @bot.command()
 async def talk(ctx, *, content):
-    kypo_logs = bot.get_channel(765924824731746354)
     await ctx.send(content)
     await ctx.message.delete()
     
