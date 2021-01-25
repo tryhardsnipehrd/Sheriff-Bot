@@ -46,10 +46,6 @@ ddlc_rules = ["Rule 1. Respect other members. | Failure to comply: Warn.",
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
     print(now)
-    bot.load_extension("ddlc")
-    bot.load_extension("main")
-    bot.load_extension("cnmc")
-    bot.load_extension("kypo")
     await bot.change_presence(activity=discord.Game(name=random.choice(statuses)))
     
 
