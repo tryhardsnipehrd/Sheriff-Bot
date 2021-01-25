@@ -6,6 +6,7 @@ from discord.ext import commands
 import datetime
 
 bot = commands.Bot(command_prefix='$')
+global dokiLockdown
 dokiLockdown = False
 
 
@@ -157,6 +158,7 @@ async def status(ctx, *, status):
 @bot.command()
 @commands.is_owner()
 async def lockdown(ctx):
+    global dokiLockdown
     if dokiLockdown:
         dokiLockdown = False
         await ctx.send("Lockdown Cancelled!")
