@@ -77,6 +77,7 @@ async def on_message(message):
 async def test(ctx):
     # Store bot message and invoke message in variables:
     await ctx.send(ctx.author.roles)
+    await ctx.send("testing")
     
 @bot.command()
 async def bday(ctx, mention=None):
