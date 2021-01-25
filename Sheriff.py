@@ -5,7 +5,7 @@ import os
 from discord.ext import commands
 import datetime
 
-bot = commands.Bot(command_prefix='$', help_command = None)
+bot = commands.Bot(command_prefix='$')
 dokiLockdown = False
 
 
@@ -72,27 +72,7 @@ async def on_message(message):
     if bot.user in message.mentions:
         await message.channel.send("WHO DARE MENTION ME")
     
-    await bot.process_commands(message)
-@bot.command()
-async def help(ctx):
-    embed=discord.Embed(title="Help",description="This is the Help command for Sheriff! It will help you to use me better! ||not in the wrong way||",color=discord.Color.red())
-    embed.add_field(name="Programming",value="[ <@597921286018170900> ]",inline=False)
-    embed.add_field(name="Development Supporters",value="myself",inline=False)
-    embed.add_field(name="Written In",value="Python, Discord.PY",inline=False)
-    embed.add_field(name="Misc. Commands",value="hello -- Greet yourself!")
-    embed.add_field(name="ㅤ",value="test -- Make sure the bot is working properly!")
-    if ctx.guild.id == 593211246510080000:
-        embed.add_field(name="ㅤ",value="rules -- Leave blank to see all the rules, and specify a number to see that specific rule",inline=False)
-    embed.add_field(name="ㅤ",value="bday -- Wish a happy birthday to someone! Usage: $bday @user_mention")
-    embed.add_field(name="ㅤ",value="***MOD COMMANDS***",inline=False)
-    embed.add_field(name="ㅤ",value="ban -- Ban a user ==== Requires `Ban_members` permission",inline=False)
-    embed.add_field(name="ㅤ",value="kick -- Kick a user ==== Requires `Kick_members` permission")
-    await ctx.send("This command is in development! Stay tuned!")
-    await ctx.send(embed=embed)
-
-       
-
-
+    await bot.process_commands(message)   
 
 
 
