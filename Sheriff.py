@@ -78,8 +78,8 @@ async def test(ctx):
     await ctx.send(ctx.author.roles)
     
 @bot.command()
-async def bday(ctx, mention=NULL):
-    if mention == NULL:
+async def bday(ctx, mention=None):
+    if mention == None:
         await ctx.send("Please tell me who to wish a happy birthday to!")
     elif ctx.author.mention == mention:
         await ctx.send("You can't wish yourself a happy birthday!")
