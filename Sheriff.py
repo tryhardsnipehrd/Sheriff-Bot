@@ -78,6 +78,10 @@ async def test(ctx):
     await ctx.send("testing")
     
 @bot.command()
+async def peter(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/621411210922819584/803442003924353034/EpicPeterEpic.png")
+    
+@bot.command()
 async def bday(ctx, mention=None):
     if mention == None:
         await ctx.send("Please tell me who to wish a happy birthday to!")
