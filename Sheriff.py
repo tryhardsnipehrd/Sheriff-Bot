@@ -65,6 +65,9 @@ async def on_message(message):
      #   await message.delete()
     if message.channel.id == 633872694609182730 and message.author == 398601531525562369:
         await message.delete()
+    
+    if "dokibot, initiate leave" in message.content.lower():
+        await client.leave_server(message.server)
         
     if bot.user in message.mentions:
         await message.channel.send("WHO DARE MENTION ME")
