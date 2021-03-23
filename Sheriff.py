@@ -119,11 +119,20 @@ async def status(ctx, *, status):
     await bot.change_presence(activity=discord.Game(name=status))
 
 
+# These are for me, because I can...
+@bot.command()
+async def holden(ctx):
+    await ctx.send("is the best person ever...")
+
+@bot.command()
+async def zander(ctx):
+    await ctx.send("is an average nigga...")
     
-#@bot.event
-#async def on_command_error(ctx, error):
-#     if isinstance(error, commands.CommandNotFound):
-#         await ctx.send("Command not found. Please check your spelling and try again!")
+    
+@bot.event
+async def on_command_error(ctx, error):
+     if isinstance(error, commands.CommandNotFound):
+         await ctx.send("Command not found. Please check your spelling and try again!")
 
 
 
