@@ -39,7 +39,7 @@ class main(commands.Cog):
     async def main(self, ctx):
         async for x in self.logs_from(ctx.message.channel):
             if x.author.id == 883552844911886407:
-                await self.delete_message(x)
+                await ctx.delete_message(x)
         
     
     @commands.Cog.listener()
