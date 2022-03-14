@@ -35,7 +35,12 @@ class main(commands.Cog):
                 await ctx.send(i)
                 await i.delete()
     
-
+    @commands.command(name="nuke")
+    async def main(self, ctx):
+        async for x in self.logs_from(ctx.message.channel):
+            if x.author.id == 883552844911886407:
+                await self.delete_message(x)
+        
     
     @commands.Cog.listener()
     async def on_member_ban(self, guild, user):
