@@ -5,6 +5,9 @@ import os
 from discord.ext import commands
 import datetime
 
+# Cog imports
+
+
 bot = commands.Bot(command_prefix='$')
 
 
@@ -23,7 +26,7 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game(name=random.choice(statuses)))
 
     # Loading all the cogs?
-    await bot.add_cog(Main(bot))
+    await bot.add_cog(main(bot))
     
 
     
