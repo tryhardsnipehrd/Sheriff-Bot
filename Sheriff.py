@@ -21,6 +21,9 @@ async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
     print(now)
     await bot.change_presence(activity=discord.Game(name=random.choice(statuses)))
+
+    # Loading all the cogs?
+    await bot.add(Main(bot))
     
 
     
