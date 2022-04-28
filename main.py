@@ -35,11 +35,6 @@ class main(commands.Cog):
                 await ctx.send(i)
                 await i.delete()
     
-    @commands.command(name="nuke")
-    async def nuke(self, ctx):
-        async for x in self.logs_from(ctx.message.channel):
-            if x.author.id == 883552844911886407:
-                await ctx.delete_message(x)
         
     
     @commands.Cog.listener()

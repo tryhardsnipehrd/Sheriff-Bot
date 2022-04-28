@@ -87,8 +87,9 @@ async def ban_error(ctx, error):
 
 @bot.command()
 async def talk(ctx, *, content):
-    await ctx.send(content)
+    message = ctx
     await ctx.message.delete()
+    await message.send(content)
     
 
 @bot.command()
@@ -119,14 +120,7 @@ async def status(ctx, *, status):
     await bot.change_presence(activity=discord.Game(name=status))
 
 
-# These are for me, because I can...
-@bot.command()
-async def holden(ctx):
-    await ctx.send("is the best person ever...")
 
-@bot.command()
-async def zander(ctx):
-    await ctx.send("is an average nigga...")
     
     
 @bot.event
