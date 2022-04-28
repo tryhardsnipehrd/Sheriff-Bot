@@ -23,7 +23,7 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game(name=random.choice(statuses)))
 
     # Loading all the cogs?
-    await bot.add(Main(bot))
+    await bot.add_cog(Main(bot))
     
 
     
